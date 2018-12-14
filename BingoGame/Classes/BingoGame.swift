@@ -18,20 +18,24 @@ public struct BingoGameConfiguration{
     }
 }
 
-public protocol BingoGameDelegate{
+public protocol BingoGameDelegate:class {
     
-    func newGameReady(game:BingoGame)
+    func bingoGameDidStart(_ game:BingoGame)
+    func bingoGame(_ game:BingoGame, cardOpened:BingoCard)
+    func bingoGame(_ game:BingoGame, deckCompleted byPlayer:BingoPlayer)
     
 }
 
 public class BingoGame {
     
     private var configuration:BingoGameConfiguration
-    private var mainDeck:BingoDeck!
-    private var players:Array<BingoPlayer> = []
+    public private(set) var mainDeck:BingoDeck!
+    public private(set) var players:Array<BingoPlayer> = []
+    public weak var delegate:BingoGameDelegate?
     
-    public init(configuration:BingoGameConfiguration) {
+    public init(configuration:BingoGameConfiguration, delegate:BingoGameDelegate?) {
         self.configuration = configuration
+        self.delegate = delegate
     }
 
     public func startGame(newConfiguration:BingoGameConfiguration? = nil){
@@ -40,6 +44,7 @@ public class BingoGame {
             self.configuration = newConfiguration
         }
         self.setupGame()
+        self.delegate?.bingoGameDidStart(self)
     }
     
     public func openCard(atIndex:Int){
@@ -47,8 +52,11 @@ public class BingoGame {
         if let card = card {
             _ = self.mainDeck.openCard(atIndex: atIndex)
             self.players.forEach { (player) in
-                _ = player.assignedDeck.open(chosenCard: card)
+                let cardOpened = player.assignedDeck.open(chosenCard: card)
+                if (cardOpened){ self.handleDeckUpdatedFor(player:player) }
             }
+            self.delegate?.bingoGame(self, cardOpened: card)
+            
         }
     }
     
@@ -58,6 +66,7 @@ public class BingoGame {
         self.players.forEach { (player) in
             print("Player '\(player.playerId)' has cards: \(player.assignedDeck.cards)")
             print("Player '\(player.playerId)' has found cards: \(player.assignedDeck.openedCards)")
+            print("Player '\(player.playerId)' score: \(player.assignedDeck.openedCards.count)")
         }
     }
 }
@@ -79,6 +88,13 @@ private extension BingoGame{
         } else {
             print("BINGO GAME ERROR: The number of available cards does not divide exactly between players!")
             return false
+        }
+    }
+    
+    private func handleDeckUpdatedFor(player:BingoPlayer){
+        if (player.assignedDeck.cards.count == player.assignedDeck.openedCards.count){
+            // Player completed deck
+            self.delegate?.bingoGame(self, deckCompleted: player)
         }
     }
     

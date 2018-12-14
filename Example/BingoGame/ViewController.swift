@@ -19,16 +19,32 @@ class ViewController: UIViewController {
         let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "lemon", "rasberry", "blueberry", "orange", "paprika"])
         let gameConfiguration = BingoGameConfiguration(playerIds:["Emma", "Manuel"],
                                                        availableCards:cardArray)
-        self.bingoGame = BingoGame(configuration: gameConfiguration)
+        self.bingoGame = BingoGame(configuration: gameConfiguration, delegate:self)
         self.bingoGame.startGame()
         
+        // Play the game!
+        for i in 0...(cardArray.count - 1) {
+            self.bingoGame.openCard(atIndex: i)
+        }
+    }
+}
+
+extension ViewController:BingoGameDelegate{
+    
+    func bingoGameDidStart(_ game: BingoGame) {
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func bingoGame(_ game: BingoGame, cardOpened: BingoCard) {
+        
     }
-
+    
+    func bingoGame(_ game: BingoGame, deckCompleted byPlayer: BingoPlayer) {
+        print("Player '\(byPlayer.playerId)' completed deck!")
+        self.bingoGame.printGameStatus()
+    }
+    
+    
+    
 }
 

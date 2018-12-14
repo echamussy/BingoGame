@@ -10,8 +10,8 @@ import GameKit
 
 public class BingoDeck{
     
-    public var cards:Array<BingoCard>
-    public var openedCards:Array<BingoCard>
+    public private(set) var cards:Array<BingoCard>
+    public private(set) var openedCards:Array<BingoCard>
     
     public init(cards:Array<BingoCard>){
         self.cards = cards
