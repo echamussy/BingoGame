@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "lemon", "rasberry", "blueberry", "orange", "paprika"])
+        let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "lemon", "rasberry", "blueberry", "orange", "paprika", "corn", "brocoli", "mushroom", "pineapple", "strawberry", "apple"])
         let gameConfiguration = BingoGameConfiguration(playerIds:["Emma", "Manuel"],
                                                        availableCards:cardArray)
         self.bingoGame = BingoGame(configuration: gameConfiguration, delegate:self)
