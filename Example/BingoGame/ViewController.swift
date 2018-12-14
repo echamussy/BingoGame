@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         self.bingoGame = BingoGame(configuration: gameConfiguration)
         self.bingoGame.startGame()
         self.bingoGame.printGameStatus()
+        self.bingoGame.openCard(atIndex: 0)
+        self.bingoGame.printGameStatus()
+        
     }
 
     override func didReceiveMemoryWarning() {

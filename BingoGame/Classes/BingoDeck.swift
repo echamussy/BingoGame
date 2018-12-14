@@ -27,6 +27,19 @@ public class BingoDeck{
         self.openedCards.removeAll()
     }
     
+    public func openCard(atIndex:Int){
+        if (atIndex < self.cards.count){
+            let chosenCard = self.cards[atIndex]
+            let cardAlreadyOpened = self.openedCards.contains(where: { (card) -> Bool in
+                return card.name == chosenCard.name
+            })
+            
+            if (!cardAlreadyOpened){
+                self.openedCards.append(chosenCard)
+            }
+        }
+    }
+    
     // MARK: Static helper methods
     
     public static func createCardArrayFrom(elements:Array<String>)->Array<BingoCard>{

@@ -36,6 +36,10 @@ public class BingoGame {
         self.setupGame()
     }
     
+    public func openCard(atIndex:Int){
+        self.mainDeck.openCard(atIndex:atIndex)
+    }
+    
     public func printGameStatus(){
         print("Main Deck: \(self.mainDeck.cards)")
         self.players.forEach { (player) in
