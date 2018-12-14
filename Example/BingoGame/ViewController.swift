@@ -9,18 +9,19 @@
 import UIKit
 import BingoGame
 
-
 class ViewController: UIViewController {
 
+    var bingoGame:BingoGame!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let mainDeck = BingoDeck.createDeckFrom(elements: ["apple", "lemon", "rasberry", "blueberry", "orange", "paprika"])
+        let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "lemon", "rasberry", "blueberry", "orange", "paprika"])
         let gameConfiguration = BingoGameConfiguration(playerNames:["Emma", "Manuel"],
-                                                       availableCards:mainDeck.cards)
-        let bingoGame = BingoGame(configuration: gameConfiguration)
-        
-        
+                                                       availableCards:cardArray)
+        self.bingoGame = BingoGame(configuration: gameConfiguration)
+        self.bingoGame.startGame()
+        self.bingoGame.printGameStatus()
     }
 
     override func didReceiveMemoryWarning() {

@@ -26,12 +26,22 @@ public class BingoGame {
     
     public init(configuration:BingoGameConfiguration) {
         self.configuration = configuration
-        self.restartGame(configuration: configuration)
     }
 
-    public func restartGame(configuration:BingoGameConfiguration){
-        self.configuration = configuration
+    public func startGame(newConfiguration:BingoGameConfiguration? = nil){
+        print("Will start setting up a new Bingo game")
+        if let newConfiguration = newConfiguration{
+            self.configuration = newConfiguration
+        }
         self.setupGame()
+    }
+    
+    public func printGameStatus(){
+        print("Main Deck: \(self.mainDeck.cards)")
+        self.players.forEach { (player) in
+            print("Player '\(player.name)' has cards: \(player.assignedDeck.cards)")
+            print("Player '\(player.name)' has found cards: \(player.assignedDeck.openedCards)")
+        }
     }
 }
 
@@ -39,7 +49,7 @@ private extension BingoGame{
     
     private func setupGame(){
         if (self.verifyGameConfiguration()){
-            self.randomizeMainDeck()
+            self.configureMainDeck()
             self.configureUsers()
         } else {
             // TODO: Report an error!
@@ -55,20 +65,32 @@ private extension BingoGame{
         }
     }
     
-    private func randomizeMainDeck(){
+    // MARK: Configuration methods
+    
+    private func configureMainDeck(){
         if mainDeck != nil { mainDeck.reset() }
         self.mainDeck = BingoDeck(cards: self.configuration.availableCards)
+        self.mainDeck.shuffle()
     }
     
     private func configureUsers(){
         self.players.removeAll()
+        
+        var playerIndex = 0
+        let numberOfCardsPerPlayer = Int(self.mainDeck.cards.count / self.configuration.playerNames.count)
+        let shuffledCardsForPlayers = self.mainDeck.cards.shuffled()
+        
         self.configuration.playerNames.forEach { (playerName) in
-            let playerDeck = BingoDeck(cards: [])
+            let startIndex = playerIndex * numberOfCardsPerPlayer
+            let endIndex = ((playerIndex + 1) * numberOfCardsPerPlayer) - 1
+            
+            let playerCards = Array(shuffledCardsForPlayers[startIndex...endIndex])
+            let playerDeck = BingoDeck(cards: playerCards)
+            
             let player = BingoPlayer(name:playerName, assignedDeck:playerDeck)
             self.players.append(player)
+            playerIndex = playerIndex + 1
         }
     }
-    
-    
     
 }

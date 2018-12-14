@@ -7,10 +7,14 @@
 
 import Foundation
 
-public struct BingoCard: Codable{
+public struct BingoCard: Codable, CustomStringConvertible{
     
     public var name:String
     public var imageName:String?
+    
+    public var description: String {
+        return name
+    }
     
     public init(name:String, imageName:String? = nil){
         self.name = name

@@ -29,13 +29,13 @@ public class BingoDeck{
     
     // MARK: Static helper methods
     
-    public static func createDeckFrom(elements:Array<String>)->BingoDeck{
+    public static func createCardArrayFrom(elements:Array<String>)->Array<BingoCard>{
         var cards:Array<BingoCard> = []
         elements.forEach { (element) in
             let bingoCard = BingoCard(name:element)
             cards.append(bingoCard)
         }
-        return BingoDeck(cards: cards)
+        return cards
     }
     
 }
