@@ -43,9 +43,9 @@
 		A0B3F49D3843FD673EBEB8BB /* Pods-BingoGame_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingoGame_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BingoGame_Tests/Pods-BingoGame_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B056742A3EEE36D40437DD2F /* Pods_BingoGame_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingoGame_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10E0FFB8347BA806FC531FE /* Pods-BingoGame_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingoGame_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BingoGame_Tests/Pods-BingoGame_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		DF6DB589A665885F6CC37125 /* BingoGame.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BingoGame.podspec; path = ../BingoGame.podspec; sourceTree = "<group>"; };
-		E196CCB0142F19E2ACE8F003 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F52CD89CB9E747A4CEC8D50C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DF6DB589A665885F6CC37125 /* BingoGame.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BingoGame.podspec; path = ../BingoGame.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E196CCB0142F19E2ACE8F003 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F52CD89CB9E747A4CEC8D50C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FB842E4A351378C99A5F5FD9 /* Pods_BingoGame_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingoGame_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 

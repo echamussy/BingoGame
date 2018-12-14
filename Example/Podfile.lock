@@ -1,0 +1,16 @@
+PODS:
+  - BingoGame (0.1.0)
+
+DEPENDENCIES:
+  - BingoGame (from `../`)
+
+EXTERNAL SOURCES:
+  BingoGame:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BingoGame: c5a50d5dd084cca28c65663c86dff7ec24f4703c
+
+PODFILE CHECKSUM: 50bd95085646a10d022e0b907b934608d0efaed4
+
+COCOAPODS: 1.5.3

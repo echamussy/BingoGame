@@ -1,0 +1,6 @@
+framework module BingoGame {
+  umbrella header "BingoGame-umbrella.h"
+
+  export *
+  module * { export * }
+}

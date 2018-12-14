@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import BingoGame
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let game = BingoGame()
+        game.sayHi()
     }
 
     override func didReceiveMemoryWarning() {
