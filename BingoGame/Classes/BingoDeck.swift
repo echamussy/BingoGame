@@ -19,7 +19,7 @@ public class BingoDeck{
     }
     
     public func shuffle(){
-        
+        self.cards.shuffle()
     }
     
     public func reset(){
