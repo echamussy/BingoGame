@@ -17,13 +17,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "lemon", "rasberry", "blueberry", "orange", "paprika"])
-        let gameConfiguration = BingoGameConfiguration(playerNames:["Emma", "Manuel"],
+        let gameConfiguration = BingoGameConfiguration(playerIds:["Emma", "Manuel"],
                                                        availableCards:cardArray)
         self.bingoGame = BingoGame(configuration: gameConfiguration)
         self.bingoGame.startGame()
-        self.bingoGame.printGameStatus()
-        self.bingoGame.openCard(atIndex: 0)
-        self.bingoGame.printGameStatus()
+        
         
     }
 

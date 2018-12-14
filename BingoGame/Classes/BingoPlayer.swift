@@ -9,7 +9,7 @@ import Foundation
 
 public struct BingoPlayer{
     
-    public let name:String
+    public let playerId:String
     public var assignedDeck:BingoDeck
     
 }

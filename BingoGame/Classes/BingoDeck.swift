@@ -27,17 +27,43 @@ public class BingoDeck{
         self.openedCards.removeAll()
     }
     
-    public func openCard(atIndex:Int){
+    public func openCard(atIndex:Int)->Bool{
         if (atIndex < self.cards.count){
             let chosenCard = self.cards[atIndex]
-            let cardAlreadyOpened = self.openedCards.contains(where: { (card) -> Bool in
-                return card.name == chosenCard.name
-            })
-            
-            if (!cardAlreadyOpened){
-                self.openedCards.append(chosenCard)
-            }
+            return self.open(chosenCard: chosenCard)
+        } else {
+            return false
         }
+    }
+    
+    public func open(chosenCard:BingoCard)-> Bool{
+        guard self.has(card: chosenCard) else {
+            return false
+        }
+        
+        let cardAlreadyOpened = self.openedCards.contains(where: { (card) -> Bool in
+            return card == chosenCard
+        })
+        
+        if (!cardAlreadyOpened){
+            self.openedCards.append(chosenCard)
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    public func has(card:BingoCard)-> Bool{
+        return self.cards.contains(where: { (deckCard) -> Bool in
+            return deckCard == card
+        })
+    }
+    
+    public func getCard(atIndex:Int)->BingoCard?{
+        if (atIndex < self.cards.count){
+            return self.cards[atIndex]
+        }
+        return nil
     }
     
     // MARK: Static helper methods
