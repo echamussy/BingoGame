@@ -14,8 +14,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let game = BingoGame()
-        game.sayHi()
+        
+        let mainDeck = BingoDeck.createDeckFrom(elements: ["apple", "lemon", "rasberry", "blueberry", "orange"])
+        let gameConfiguration = BingoGameConfiguration(playerNames:["Emma", "Manuel"],
+                                                       availableCards:mainDeck.cards)
+        let bingoGame = BingoGame(configuration: gameConfiguration)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
