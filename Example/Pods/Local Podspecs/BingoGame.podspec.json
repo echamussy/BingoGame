@@ -18,5 +18,11 @@
   "platforms": {
     "ios": "11.0"
   },
-  "source_files": "BingoGame/Classes/**/*"
+  "source_files": "BingoGame/Classes/**/*",
+  "resource_bundles": {
+    "BingoGame": [
+      "BingoGame/Assets/*.png",
+      "BingoGame/Classes/UI/**/*.xib"
+    ]
+  }
 }

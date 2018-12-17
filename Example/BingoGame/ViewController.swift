@@ -32,7 +32,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let bingoViewController = BingoViewController()
+        let podBundle = Bundle(for:BingoViewController.self)
+        let bingoViewController = BingoViewController(nibName: "BingoViewController", bundle: podBundle)
         self.present(bingoViewController, animated: false, completion: nil)
     }
 }

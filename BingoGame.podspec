@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'BingoGame/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'BingoGame' => ['BingoGame/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'BingoGame' => ['BingoGame/Assets/*.png', 'BingoGame/Classes/UI/**/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
