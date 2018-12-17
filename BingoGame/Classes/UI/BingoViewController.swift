@@ -12,6 +12,7 @@ public class BingoViewController: UIViewController {
     @IBOutlet weak var localPlayerViewContainer: UIView!
     @IBOutlet weak var mainDeckViewContainer: UIView!
     @IBOutlet weak var remotePlayerViewContainer: UIView!
+    @IBOutlet weak var stackView: UIStackView!
     
     var bingoGame:BingoGame!
     
@@ -25,6 +26,18 @@ public class BingoViewController: UIViewController {
                                      inView: self.localPlayerViewContainer,
                                      parentViewController: self)
         
+        let mainDeckViewController = BingoDeckViewController(deck:self.bingoGame.mainDeck)
+        BingoViewController.addChild(viewController: mainDeckViewController,
+                                     inView: self.mainDeckViewContainer,
+                                     parentViewController: self)
+        
+        let remotePlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[1].assignedDeck)
+        BingoViewController.addChild(viewController: remotePlayerDeckViewController,
+                                     inView: self.remotePlayerViewContainer,
+                                     parentViewController: self)
+        
+        
+        
     }
     
     // MARK: Private methods
@@ -35,11 +48,6 @@ public class BingoViewController: UIViewController {
                                                        availableCards:cardArray)
         self.bingoGame = BingoGame(configuration: gameConfiguration, delegate:self)
         self.bingoGame.startGame()
-        
-        // Play the game!
-        for i in 0...(cardArray.count - 1) {
-            self.bingoGame.openCard(atIndex: i)
-        }
     }
     
     

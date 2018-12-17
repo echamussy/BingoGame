@@ -23,7 +23,7 @@
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6E4-m7-q8f">
                     <rect key="frame" x="0.0" y="0.0" width="592" height="623"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KMy-bc-DZ8">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -32,7 +32,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.28874933180000001" green="0.24246819659999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="6E4-m7-q8f" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="22A-oY-RUU"/>
                 <constraint firstItem="6E4-m7-q8f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ajk-Zi-phs"/>
