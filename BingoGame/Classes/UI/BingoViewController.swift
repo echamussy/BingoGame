@@ -12,7 +12,6 @@ public class BingoViewController: UIViewController {
     @IBOutlet weak var localPlayerViewContainer: UIView!
     @IBOutlet weak var mainDeckViewContainer: UIView!
     @IBOutlet weak var remotePlayerViewContainer: UIView!
-    @IBOutlet weak var stackView: UIStackView!
     
     var bingoGame:BingoGame!
     

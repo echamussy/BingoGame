@@ -13,28 +13,45 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BingoCardCollectionViewCell" customModule="BingoGame" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="130" height="75"/>
+            <rect key="frame" x="0.0" y="0.0" width="234" height="161"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="130" height="75"/>
+                <rect key="frame" x="0.0" y="0.0" width="234" height="161"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bingo card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIy-fQ-dfL">
-                        <rect key="frame" x="0.0" y="9" width="83" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnL-Vm-IPZ">
+                        <rect key="frame" x="67" y="30.5" width="100" height="100"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="Wz5-tP-Ao5"/>
+                            <constraint firstAttribute="height" constant="100" id="prC-2b-VwO"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQN-Bh-9D4">
+                        <rect key="frame" x="67" y="70" width="100" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.98925774489999996" blue="0.26316744720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qQN-Bh-9D4" firstAttribute="width" secondItem="nnL-Vm-IPZ" secondAttribute="width" id="4qW-MS-Uta"/>
+                <constraint firstItem="nnL-Vm-IPZ" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="Avy-tk-fnv"/>
+                <constraint firstItem="qQN-Bh-9D4" firstAttribute="centerX" secondItem="nnL-Vm-IPZ" secondAttribute="centerX" id="bce-4W-CRv"/>
+                <constraint firstItem="nnL-Vm-IPZ" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="ix6-dE-uic"/>
+                <constraint firstItem="qQN-Bh-9D4" firstAttribute="centerY" secondItem="nnL-Vm-IPZ" secondAttribute="centerY" id="uWu-Ty-yDr"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="130" height="75"/>
+            <size key="customSize" width="264" height="136"/>
             <connections>
-                <outlet property="nameLabel" destination="uIy-fQ-dfL" id="NMh-Dw-mge"/>
+                <outlet property="cardContainerView" destination="nnL-Vm-IPZ" id="Bk8-UZ-2Sc"/>
+                <outlet property="containerHeightConstraint" destination="prC-2b-VwO" id="dVr-wL-GA9"/>
+                <outlet property="containerWidthConstraint" destination="Wz5-tP-Ao5" id="6Kl-Oe-5ic"/>
+                <outlet property="nameLabel" destination="qQN-Bh-9D4" id="S0L-Xd-nAu"/>
             </connections>
-            <point key="canvasLocation" x="136" y="91"/>
+            <point key="canvasLocation" x="243.19999999999999" y="63.418290854572717"/>
         </collectionViewCell>
     </objects>
 </document>

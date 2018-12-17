@@ -28,10 +28,18 @@ class BingoDeckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let collectionViewLayout = BingoDeckCollectionViewFlowLayout(deck:self.deck)
+        self.collectionView.setCollectionViewLayout(collectionViewLayout, animated: false)
+        
         let bundle = Bundle(for: BingoCardCollectionViewCell.self)
         self.collectionView.register(UINib(nibName: "BingoCardCollectionViewCell", bundle: bundle), forCellWithReuseIdentifier: "cardCell")
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.collectionView.collectionViewLayout.invalidateLayout()
     }
 
 }
@@ -47,6 +55,7 @@ extension BingoDeckViewController:UICollectionViewDataSource{
         let card = self.deck.cards[indexPath.row]
         
         cell.render(card: card)
+        
         /*
         cell.makeCurvedCorners(5.0)
         cell.layer.borderColor = UIColor.lightGray.cgColor
