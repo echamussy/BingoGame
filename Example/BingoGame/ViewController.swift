@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var bingoGame:BingoGame!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "lemon", "rasberry", "blueberry", "orange", "paprika", "corn", "brocoli", "mushroom", "pineapple", "strawberry", "apple"])
@@ -26,6 +27,13 @@ class ViewController: UIViewController {
         for i in 0...(cardArray.count - 1) {
             self.bingoGame.openCard(atIndex: i)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let bingoViewController = BingoViewController()
+        self.present(bingoViewController, animated: false, completion: nil)
     }
 }
 
