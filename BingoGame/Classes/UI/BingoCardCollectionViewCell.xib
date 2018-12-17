@@ -13,45 +13,37 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BingoCardCollectionViewCell" customModule="BingoGame" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="234" height="161"/>
+            <rect key="frame" x="0.0" y="0.0" width="417" height="285"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="234" height="161"/>
+                <rect key="frame" x="0.0" y="0.0" width="417" height="285"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnL-Vm-IPZ">
-                        <rect key="frame" x="67" y="30.5" width="100" height="100"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="bingo-closed-card" translatesAutoresizingMaskIntoConstraints="NO" id="n42-6y-Nnx">
+                        <rect key="frame" x="158.5" y="92.5" width="100" height="100"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="Wz5-tP-Ao5"/>
-                            <constraint firstAttribute="height" constant="100" id="prC-2b-VwO"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="2fG-yb-xjK"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="luS-8u-sY4"/>
                         </constraints>
-                    </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQN-Bh-9D4">
-                        <rect key="frame" x="67" y="70" width="100" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="qQN-Bh-9D4" firstAttribute="width" secondItem="nnL-Vm-IPZ" secondAttribute="width" id="4qW-MS-Uta"/>
-                <constraint firstItem="nnL-Vm-IPZ" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="Avy-tk-fnv"/>
-                <constraint firstItem="qQN-Bh-9D4" firstAttribute="centerX" secondItem="nnL-Vm-IPZ" secondAttribute="centerX" id="bce-4W-CRv"/>
-                <constraint firstItem="nnL-Vm-IPZ" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="ix6-dE-uic"/>
-                <constraint firstItem="qQN-Bh-9D4" firstAttribute="centerY" secondItem="nnL-Vm-IPZ" secondAttribute="centerY" id="uWu-Ty-yDr"/>
+                <constraint firstItem="n42-6y-Nnx" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="UkO-bQ-fCJ"/>
+                <constraint firstItem="n42-6y-Nnx" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" priority="750" id="iHJ-fJ-ynl"/>
+                <constraint firstItem="n42-6y-Nnx" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" priority="750" id="scB-XE-l4U"/>
+                <constraint firstItem="n42-6y-Nnx" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="w3W-40-Ri0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="264" height="136"/>
+            <size key="customSize" width="447" height="260"/>
             <connections>
-                <outlet property="cardContainerView" destination="nnL-Vm-IPZ" id="Bk8-UZ-2Sc"/>
-                <outlet property="containerHeightConstraint" destination="prC-2b-VwO" id="dVr-wL-GA9"/>
-                <outlet property="containerWidthConstraint" destination="Wz5-tP-Ao5" id="6Kl-Oe-5ic"/>
-                <outlet property="nameLabel" destination="qQN-Bh-9D4" id="S0L-Xd-nAu"/>
+                <outlet property="imageView" destination="n42-6y-Nnx" id="0j7-wA-4mD"/>
             </connections>
-            <point key="canvasLocation" x="243.19999999999999" y="63.418290854572717"/>
+            <point key="canvasLocation" x="389.60000000000002" y="119.1904047976012"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="bingo-closed-card" width="114" height="110"/>
+    </resources>
 </document>

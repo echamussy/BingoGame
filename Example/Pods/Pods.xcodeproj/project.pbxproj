@@ -7,30 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D4472340B302EC9EC9E3F4F4C687674 /* BingoCardCollectionViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 94312AFA0DC87D51BF7566999ECFF472 /* BingoCardCollectionViewCell.xib */; };
-		0F74FEAB55ED0E563218FD64722DBBD3 /* BingoGame.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26EB7B07F7701D2546477D5696837E22 /* BingoGame.bundle */; };
+		02944D567AD7F3093B44B860BED3ED09 /* BingoDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833AA9118FA9CB39343BCDE3A69FD82 /* BingoDeckViewController.swift */; };
+		03D6455F5A5155BDD77103A9C6246263 /* BingoDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8303270352A58018EDB39FD00B677 /* BingoDeck.swift */; };
+		08B96C35A34D5FEFAE08A10B9EF8A317 /* BingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE293678F5B205F56B514D801BC76E6 /* BingoViewController.swift */; };
+		130964A0DFF1097B418C5682FF858F96 /* BingoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B92F77B3170C1B012D9B9BC192606D /* BingoGame.swift */; };
+		130A767FF555351593B8B5B77A7DDE0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		1AF76E0BA60DF6977AB37BB880810003 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		2251E1A459577B3E1A646A93E0BBF491 /* BingoGame-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AA6F2F805A40C14EC11A781D122233E /* BingoGame-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22AF9FED9995A1872BAB8A7878DE2247 /* Pods-BingoGame_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653927D6977553FA2DE921CC39046E3 /* Pods-BingoGame_Example-dummy.m */; };
 		2DBDF79A6043F174807A1B46544F8C4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		431E6B6E864A58F2608F180EF4CA0C58 /* BingoCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94312AFA0DC87D51BF7566999ECFF472 /* BingoCardCollectionViewCell.xib */; };
-		4409AB7CB95B769D8403889333AF53A2 /* BingoCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BF592AA971915B2AAC2EAA02D5C52A /* BingoCardCollectionViewCell.swift */; };
-		4643045F20722C09D5E32307D5937D88 /* BingoDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D342EAFBF874721F2E4E4D46A8B04BF /* BingoDeck.swift */; };
+		2E2B9FF433F4444E679CAD3C8C4083D8 /* BingoDeckCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055EFCAB975571610F9E85B0985E649 /* BingoDeckCollectionViewFlowLayout.swift */; };
+		41BA0BC719A4B40ADB10F8245F9409AA /* bingo-closed-card.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC4BDBB32CCE663B3D3CFCD354879A /* bingo-closed-card.pdf */; };
+		422729E191E69A551ABC82936886BEEA /* BingoDeckViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 13E192F496B72D471AD187E9DC5D899F /* BingoDeckViewController.xib */; };
 		4A7862C4DE6D02437D775806DF6D733E /* Pods-BingoGame_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D6FBB2A4AD7097032218A3C4BF10B3 /* Pods-BingoGame_Tests-dummy.m */; };
-		551EBB54116A76C7E9CCB7A5480648B8 /* BingoDeckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68FA5714100E042B8D54AC97BEF2599 /* BingoDeckViewController.xib */; };
-		6089B0F5E562967C233946AB8AEFB7F1 /* BingoViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 096954C73A864F9AD63329923F428C54 /* BingoViewController.xib */; };
-		6319E6838251413EAA7A69EC6D25F6D3 /* BingoGame-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FD978C8015E580EFCFD74F2F404FDA4 /* BingoGame-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58A876D061A448C9EE5312A0E02B5716 /* BingoDeckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E192F496B72D471AD187E9DC5D899F /* BingoDeckViewController.xib */; };
+		5F8FA9A4C2B0861DFFF074A8F0AB4CC9 /* BingoGame-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA3957C3EF6B8A12B4141FD889DBFFF /* BingoGame-dummy.m */; };
+		691EBD67CCF91921E6F3058BBCC25963 /* BingoGame.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26EB7B07F7701D2546477D5696837E22 /* BingoGame.bundle */; };
+		69F662D104036237C5A7A6E6E6A96DDC /* BingoCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3638BA4A481EA6DE87A590C5E2D348 /* BingoCardCollectionViewCell.xib */; };
+		72EE131191F7515DD6495258168E8169 /* BingoCardCollectionViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4B3638BA4A481EA6DE87A590C5E2D348 /* BingoCardCollectionViewCell.xib */; };
 		73E38273869B65B1E52A9954F72C4F78 /* Pods-BingoGame_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6EE3133B0E54B8502C86AADB3966107 /* Pods-BingoGame_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95147B127D5B156BAC6FD937DE231960 /* BingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6EFEBAFF7C7B895E9270224960C626 /* BingoViewController.swift */; };
-		96369280EF509291128F8D0C38F6A3C5 /* BingoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE52174CB4C8F01DDA2AB04640D549 /* BingoGame.swift */; };
+		79A9D13C33EDB13E8304DF8733A1CC82 /* BingoCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9C0CCE9ABE34BBB7FA6D9681B7303 /* BingoCardCollectionViewCell.swift */; };
 		9BDEFF2C731D60C9BBA303C9F4D41548 /* Pods-BingoGame_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B4C93D755D63C827BBB8C31D031FC95 /* Pods-BingoGame_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA82404ABC56587909EB579C5067A461 /* BingoDeckViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = F68FA5714100E042B8D54AC97BEF2599 /* BingoDeckViewController.xib */; };
-		C0106D099166F731FE90AAB3B6714981 /* BingoGame-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9E1DD4953468A712012212495F2CAC /* BingoGame-dummy.m */; };
-		D5EBAE7848D935A77AC02ED577FAC06D /* BingoDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2988356070BB31C60F163401AC973CAA /* BingoDeckViewController.swift */; };
-		DDFEB1ECBCF5FE15739BA3D1E3B902B0 /* BingoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096954C73A864F9AD63329923F428C54 /* BingoViewController.xib */; };
-		EAB87BD421C7CD3F00F94FEB /* BingoDeckCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB87BD321C7CD3F00F94FEB /* BingoDeckCollectionViewFlowLayout.swift */; };
-		F12A287D4E461B593D4B27A118A7F8BF /* BingoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183D68FE21A09AC057056190942E575 /* BingoCard.swift */; };
-		FB3B4AAAD2A509ED48551A0465E33E7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		FFDDF6FF2F6BF858FCA6BB7E212EC3AC /* BingoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414D1B23FEC99FD01BA57BEA56868B3 /* BingoPlayer.swift */; };
+		9C61E0A3D97620D37A495BC1261A5B99 /* BingoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED3D4873F812C15F8672D27988C1696 /* BingoViewController.xib */; };
+		9C65AD839B671280CEFDD7AA18C574A9 /* BingoViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8ED3D4873F812C15F8672D27988C1696 /* BingoViewController.xib */; };
+		C4C0C5FAEC15EA43A42A11957C0095D9 /* BingoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ABBABE885DD715079F237FDB5C437E /* BingoCard.swift */; };
+		CDE07BF2011E268B3A948F18360D8067 /* BingoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4480046A0A011E37D686A87F0A0CE9F /* BingoPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,70 +42,71 @@
 			remoteGlobalIDString = A29E93EDFB7CC9AC88CC617212B6BC29;
 			remoteInfo = "Pods-BingoGame_Example";
 		};
-		2D416FF07175A620B9AB3ABC9614F580 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7AC51665BA3673E06367038FFB279242;
-			remoteInfo = "BingoGame-BingoGame";
-		};
 		608EF7B2812EC9126C33BBABF0D86F7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5C1F61EF2515EE04C0952E530F3A8151;
+			remoteGlobalIDString = 2A8BD71F1D6A126DB34D13076CDB3888;
 			remoteInfo = BingoGame;
+		};
+		D7C5882BFAFF5CEF4FFADF1422C54EA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB1F4B0000C4E8E0B4541C7B5BAEE2D3;
+			remoteInfo = "BingoGame-BingoGame";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0183D68FE21A09AC057056190942E575 /* BingoCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BingoCard.swift; path = BingoGame/Classes/BingoCard.swift; sourceTree = "<group>"; };
 		02731EB498360DC392B15FBD1788C3B3 /* Pods-BingoGame_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BingoGame_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		096954C73A864F9AD63329923F428C54 /* BingoViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = BingoViewController.xib; sourceTree = "<group>"; };
-		09A20E7AD73368E5A86A10A2A0E17BDA /* BingoGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BingoGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09A20E7AD73368E5A86A10A2A0E17BDA /* BingoGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BingoGame.framework; path = BingoGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3997DF5A83292ABE7353A8B6BBD875 /* Pods-BingoGame_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BingoGame_Tests-resources.sh"; sourceTree = "<group>"; };
 		0CA2858526492CC6CE8339A5337F18D9 /* Pods-BingoGame_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BingoGame_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		13E192F496B72D471AD187E9DC5D899F /* BingoDeckViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = BingoDeckViewController.xib; sourceTree = "<group>"; };
 		1738D468EA90B6103F96DC950452EAF5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26EB7B07F7701D2546477D5696837E22 /* BingoGame.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BingoGame.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		2988356070BB31C60F163401AC973CAA /* BingoDeckViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BingoDeckViewController.swift; sourceTree = "<group>"; };
+		26EB7B07F7701D2546477D5696837E22 /* BingoGame.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BingoGame.bundle; path = "BingoGame-BingoGame.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AA6F2F805A40C14EC11A781D122233E /* BingoGame-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BingoGame-umbrella.h"; sourceTree = "<group>"; };
 		32ECB375F85F2A5C69F391443B2096F9 /* Pods-BingoGame_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BingoGame_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3BFC49BC14F0DDC2987E0BC74636AD9D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C9E1DD4953468A712012212495F2CAC /* BingoGame-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BingoGame-dummy.m"; sourceTree = "<group>"; };
+		4B3638BA4A481EA6DE87A590C5E2D348 /* BingoCardCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = BingoCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		528DE9BC337D32485FD8B212283B63A0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		589761A923504FB12B7C464B8B23A114 /* Pods-BingoGame_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BingoGame_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6DCFC66F84B6DD9D841D5B03CFCD7345 /* Pods_BingoGame_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingoGame_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDC4BDBB32CCE663B3D3CFCD354879A /* bingo-closed-card.pdf */ = {isa = PBXFileReference; includeInIndex = 1; path = "bingo-closed-card.pdf"; sourceTree = "<group>"; };
+		68F8303270352A58018EDB39FD00B677 /* BingoDeck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BingoDeck.swift; path = BingoGame/Classes/BingoDeck.swift; sourceTree = "<group>"; };
+		6DCFC66F84B6DD9D841D5B03CFCD7345 /* Pods_BingoGame_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BingoGame_Tests.framework; path = "Pods-BingoGame_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E35DF84E7B97D33CA66786A80276E45 /* Pods-BingoGame_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BingoGame_Example.modulemap"; sourceTree = "<group>"; };
 		73D6FBB2A4AD7097032218A3C4BF10B3 /* Pods-BingoGame_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BingoGame_Tests-dummy.m"; sourceTree = "<group>"; };
-		75286B0AEEF280AE4A03C75186CD9B81 /* BingoGame.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BingoGame.modulemap; sourceTree = "<group>"; };
 		767C494B177C3E5C8AD673DD8E4C978F /* Pods-BingoGame_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BingoGame_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		7753AA2A866CBAA4F962203D7C23B64F /* Pods-BingoGame_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BingoGame_Example-resources.sh"; sourceTree = "<group>"; };
-		818862E43E4AF686695CF88473D353AD /* Pods_BingoGame_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingoGame_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BFE52174CB4C8F01DDA2AB04640D549 /* BingoGame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BingoGame.swift; path = BingoGame/Classes/BingoGame.swift; sourceTree = "<group>"; };
-		8D342EAFBF874721F2E4E4D46A8B04BF /* BingoDeck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BingoDeck.swift; path = BingoGame/Classes/BingoDeck.swift; sourceTree = "<group>"; };
-		8FD978C8015E580EFCFD74F2F404FDA4 /* BingoGame-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BingoGame-umbrella.h"; sourceTree = "<group>"; };
+		7CE293678F5B205F56B514D801BC76E6 /* BingoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BingoViewController.swift; sourceTree = "<group>"; };
+		8055EFCAB975571610F9E85B0985E649 /* BingoDeckCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BingoDeckCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		818862E43E4AF686695CF88473D353AD /* Pods_BingoGame_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BingoGame_Example.framework; path = "Pods-BingoGame_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D910260ED7D2D43F9B1B91D0D3CD77A /* ResourceBundle-BingoGame-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BingoGame-Info.plist"; sourceTree = "<group>"; };
+		8ED3D4873F812C15F8672D27988C1696 /* BingoViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = BingoViewController.xib; sourceTree = "<group>"; };
+		91ABBABE885DD715079F237FDB5C437E /* BingoCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BingoCard.swift; path = BingoGame/Classes/BingoCard.swift; sourceTree = "<group>"; };
 		91EFD8EA3F11628199CB3CC0C37D0551 /* Pods-BingoGame_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BingoGame_Tests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94312AFA0DC87D51BF7566999ECFF472 /* BingoCardCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = BingoCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9653927D6977553FA2DE921CC39046E3 /* Pods-BingoGame_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BingoGame_Example-dummy.m"; sourceTree = "<group>"; };
-		96693DDD4DC7B31CD283E469D1D6D93F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B4C93D755D63C827BBB8C31D031FC95 /* Pods-BingoGame_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BingoGame_Example-umbrella.h"; sourceTree = "<group>"; };
+		A3AC42526D67E0EA6737AC44FB4F9190 /* BingoGame.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BingoGame.modulemap; sourceTree = "<group>"; };
+		A833AA9118FA9CB39343BCDE3A69FD82 /* BingoDeckViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BingoDeckViewController.swift; sourceTree = "<group>"; };
 		A91892E069DEE22FA1C832E47692BCB2 /* Pods-BingoGame_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BingoGame_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		B57142C3D22C7BA1B968CAD17046410E /* BingoGame-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BingoGame-prefix.pch"; sourceTree = "<group>"; };
-		B8BF592AA971915B2AAC2EAA02D5C52A /* BingoCardCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BingoCardCollectionViewCell.swift; sourceTree = "<group>"; };
-		BB6EFEBAFF7C7B895E9270224960C626 /* BingoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BingoViewController.swift; sourceTree = "<group>"; };
+		B8B92F77B3170C1B012D9B9BC192606D /* BingoGame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BingoGame.swift; path = BingoGame/Classes/BingoGame.swift; sourceTree = "<group>"; };
+		C457F1F5ABE31CACBBFC2989DB005B66 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6CA102C1390F684E169B9E068E0AE8E /* Pods-BingoGame_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BingoGame_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C6EE3133B0E54B8502C86AADB3966107 /* Pods-BingoGame_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BingoGame_Tests-umbrella.h"; sourceTree = "<group>"; };
-		CA92B35836AD71ABA66D47625815728C /* BingoGame.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BingoGame.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CD3747B252A03C7EF427B27471EA641A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		D414D1B23FEC99FD01BA57BEA56868B3 /* BingoPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BingoPlayer.swift; path = BingoGame/Classes/BingoPlayer.swift; sourceTree = "<group>"; };
+		CEA3957C3EF6B8A12B4141FD889DBFFF /* BingoGame-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BingoGame-dummy.m"; sourceTree = "<group>"; };
+		D4379FBD609AB3DA98C95D8315617488 /* BingoGame.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BingoGame.xcconfig; sourceTree = "<group>"; };
 		D661E5C98B030303A6899423892B2ECF /* Pods-BingoGame_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BingoGame_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D6B9FF6F7212C334537F5A75C9D8F0FF /* Pods-BingoGame_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BingoGame_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DB10C6B2E11EA7AF337EBA3FEDD90997 /* BingoGame.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BingoGame.xcconfig; sourceTree = "<group>"; };
-		DE6A6978F4AA21CEA6E6B7E7815B947B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		EAB87BD321C7CD3F00F94FEB /* BingoDeckCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoDeckCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		DC137B2A4415D1A6A411D884BBCB3618 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E4480046A0A011E37D686A87F0A0CE9F /* BingoPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BingoPlayer.swift; path = BingoGame/Classes/BingoPlayer.swift; sourceTree = "<group>"; };
+		F55834AC30050991603C87EC6332649F /* BingoGame-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BingoGame-prefix.pch"; sourceTree = "<group>"; };
+		F58760D67F581558D804471D01592FF8 /* BingoGame.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BingoGame.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F5B7FA94350519266B24AC4EE9BF2167 /* Pods-BingoGame_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BingoGame_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F68FA5714100E042B8D54AC97BEF2599 /* BingoDeckViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = BingoDeckViewController.xib; sourceTree = "<group>"; };
-		FD088084A13F6A2062D00DD5CDDB6BA6 /* ResourceBundle-BingoGame-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BingoGame-Info.plist"; sourceTree = "<group>"; };
+		FDF9C0CCE9ABE34BBB7FA6D9681B7303 /* BingoCardCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BingoCardCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,53 +126,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C03DE1ACBED11B9EBE8FEB1855076E80 /* Frameworks */ = {
+		9C7750F9E828AAA9728FAAF0307E8A5D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E96945B0FF659FFACAD5DC49AA500816 /* Frameworks */ = {
+		F54A3EEC7DE17CD27D57D0655DF2684A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB3B4AAAD2A509ED48551A0465E33E7C /* Foundation.framework in Frameworks */,
+				130A767FF555351593B8B5B77A7DDE0F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1EB55106A0ADE37496A2E93932FF6589 /* Support Files */ = {
+		0C6625BFD135A21FCFCBC460B0E6ADFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				75286B0AEEF280AE4A03C75186CD9B81 /* BingoGame.modulemap */,
-				DB10C6B2E11EA7AF337EBA3FEDD90997 /* BingoGame.xcconfig */,
-				4C9E1DD4953468A712012212495F2CAC /* BingoGame-dummy.m */,
-				B57142C3D22C7BA1B968CAD17046410E /* BingoGame-prefix.pch */,
-				8FD978C8015E580EFCFD74F2F404FDA4 /* BingoGame-umbrella.h */,
-				96693DDD4DC7B31CD283E469D1D6D93F /* Info.plist */,
-				FD088084A13F6A2062D00DD5CDDB6BA6 /* ResourceBundle-BingoGame-Info.plist */,
+				E4AB9FC519F30D79D09E3A49D95A99BB /* Assets */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/BingoGame";
-			sourceTree = "<group>";
-		};
-		2DE475DC598E15BCAE1C74310889175D /* BingoGame */ = {
-			isa = PBXGroup;
-			children = (
-				0183D68FE21A09AC057056190942E575 /* BingoCard.swift */,
-				8D342EAFBF874721F2E4E4D46A8B04BF /* BingoDeck.swift */,
-				8BFE52174CB4C8F01DDA2AB04640D549 /* BingoGame.swift */,
-				D414D1B23FEC99FD01BA57BEA56868B3 /* BingoPlayer.swift */,
-				7C95AFBC30473CD2634BFB65C9856297 /* Pod */,
-				B86B1F820F62D79B1DE791D18FD2C0D9 /* Resources */,
-				1EB55106A0ADE37496A2E93932FF6589 /* Support Files */,
-				449934BF7E20CC8DDC493B908D832D0F /* UI */,
-			);
-			name = BingoGame;
-			path = ../..;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		3037AFCE4FC92D7FB52285090C401FC6 /* Targets Support Files */ = {
@@ -182,27 +161,27 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		449934BF7E20CC8DDC493B908D832D0F /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				B8BF592AA971915B2AAC2EAA02D5C52A /* BingoCardCollectionViewCell.swift */,
-				94312AFA0DC87D51BF7566999ECFF472 /* BingoCardCollectionViewCell.xib */,
-				2988356070BB31C60F163401AC973CAA /* BingoDeckViewController.swift */,
-				F68FA5714100E042B8D54AC97BEF2599 /* BingoDeckViewController.xib */,
-				BB6EFEBAFF7C7B895E9270224960C626 /* BingoViewController.swift */,
-				096954C73A864F9AD63329923F428C54 /* BingoViewController.xib */,
-				EAB87BD321C7CD3F00F94FEB /* BingoDeckCollectionViewFlowLayout.swift */,
-			);
-			name = UI;
-			path = BingoGame/Classes/UI;
-			sourceTree = "<group>";
-		};
 		44D5347904CF754D6785B84253F2574A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		69B4F85652C0B882638784EBE38CDBE9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3AC42526D67E0EA6737AC44FB4F9190 /* BingoGame.modulemap */,
+				D4379FBD609AB3DA98C95D8315617488 /* BingoGame.xcconfig */,
+				CEA3957C3EF6B8A12B4141FD889DBFFF /* BingoGame-dummy.m */,
+				F55834AC30050991603C87EC6332649F /* BingoGame-prefix.pch */,
+				2AA6F2F805A40C14EC11A781D122233E /* BingoGame-umbrella.h */,
+				C457F1F5ABE31CACBBFC2989DB005B66 /* Info.plist */,
+				8D910260ED7D2D43F9B1B91D0D3CD77A /* ResourceBundle-BingoGame-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BingoGame";
 			sourceTree = "<group>";
 		};
 		72FB7DAC0C934576E9138C0880F4527E /* Pods-BingoGame_Example */ = {
@@ -221,16 +200,6 @@
 			);
 			name = "Pods-BingoGame_Example";
 			path = "Target Support Files/Pods-BingoGame_Example";
-			sourceTree = "<group>";
-		};
-		7C95AFBC30473CD2634BFB65C9856297 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				CA92B35836AD71ABA66D47625815728C /* BingoGame.podspec */,
-				CD3747B252A03C7EF427B27471EA641A /* LICENSE */,
-				DE6A6978F4AA21CEA6E6B7E7815B947B /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -255,11 +224,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B86B1F820F62D79B1DE791D18FD2C0D9 /* Resources */ = {
+		B386C822B54AFB9E1CA7F02A0112CA05 /* BingoGame */ = {
 			isa = PBXGroup;
 			children = (
+				91ABBABE885DD715079F237FDB5C437E /* BingoCard.swift */,
+				68F8303270352A58018EDB39FD00B677 /* BingoDeck.swift */,
+				B8B92F77B3170C1B012D9B9BC192606D /* BingoGame.swift */,
+				E4480046A0A011E37D686A87F0A0CE9F /* BingoPlayer.swift */,
+				C2355DC6AC11A7F92420C4EB97466449 /* Pod */,
+				0C6625BFD135A21FCFCBC460B0E6ADFD /* Resources */,
+				69B4F85652C0B882638784EBE38CDBE9 /* Support Files */,
+				B821819757E7B27F0026C91387C17654 /* UI */,
 			);
-			name = Resources;
+			name = BingoGame;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B821819757E7B27F0026C91387C17654 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FDF9C0CCE9ABE34BBB7FA6D9681B7303 /* BingoCardCollectionViewCell.swift */,
+				4B3638BA4A481EA6DE87A590C5E2D348 /* BingoCardCollectionViewCell.xib */,
+				8055EFCAB975571610F9E85B0985E649 /* BingoDeckCollectionViewFlowLayout.swift */,
+				A833AA9118FA9CB39343BCDE3A69FD82 /* BingoDeckViewController.swift */,
+				13E192F496B72D471AD187E9DC5D899F /* BingoDeckViewController.xib */,
+				7CE293678F5B205F56B514D801BC76E6 /* BingoViewController.swift */,
+				8ED3D4873F812C15F8672D27988C1696 /* BingoViewController.xib */,
+			);
+			name = UI;
+			path = BingoGame/Classes/UI;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -268,6 +261,16 @@
 				44D5347904CF754D6785B84253F2574A /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2355DC6AC11A7F92420C4EB97466449 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F58760D67F581558D804471D01592FF8 /* BingoGame.podspec */,
+				528DE9BC337D32485FD8B212283B63A0 /* LICENSE */,
+				DC137B2A4415D1A6A411D884BBCB3618 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		CC440E3FBFD59CA1F04B98734253C2C6 /* Pods-BingoGame_Tests */ = {
@@ -288,10 +291,19 @@
 			path = "Target Support Files/Pods-BingoGame_Tests";
 			sourceTree = "<group>";
 		};
+		E4AB9FC519F30D79D09E3A49D95A99BB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC4BDBB32CCE663B3D3CFCD354879A /* bingo-closed-card.pdf */,
+			);
+			name = Assets;
+			path = BingoGame/Assets;
+			sourceTree = "<group>";
+		};
 		FFB05E5FC4F5E1639BED6B7D9449AB8D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2DE475DC598E15BCAE1C74310889175D /* BingoGame */,
+				B386C822B54AFB9E1CA7F02A0112CA05 /* BingoGame */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -299,14 +311,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		127F71B18E1A42306ED82357D7BA431A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6319E6838251413EAA7A69EC6D25F6D3 /* BingoGame-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		20E4D775E3AB404E76372229B8516EDA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,9 +327,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FEEB876D333E58F612B19C5CDFC11E2D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2251E1A459577B3E1A646A93E0BBF491 /* BingoGame-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2A8BD71F1D6A126DB34D13076CDB3888 /* BingoGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F62301E479F47B0BB6AF1215741EF55 /* Build configuration list for PBXNativeTarget "BingoGame" */;
+			buildPhases = (
+				FEEB876D333E58F612B19C5CDFC11E2D /* Headers */,
+				9CC87F10A368EA455356821AA961878C /* Sources */,
+				F54A3EEC7DE17CD27D57D0655DF2684A /* Frameworks */,
+				57AEEFEC674E233DB00415C82125383D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02FDFD937A5CAD84C80D2AC6F7751EB6 /* PBXTargetDependency */,
+			);
+			name = BingoGame;
+			productName = BingoGame;
+			productReference = 09A20E7AD73368E5A86A10A2A0E17BDA /* BingoGame.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		2F923BFDB08142D865EBB905B11B6FDB /* Pods-BingoGame_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF2616C3F73754552E391152DDEA0B1E /* Build configuration list for PBXNativeTarget "Pods-BingoGame_Tests" */;
@@ -345,42 +376,6 @@
 			productReference = 6DCFC66F84B6DD9D841D5B03CFCD7345 /* Pods_BingoGame_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5C1F61EF2515EE04C0952E530F3A8151 /* BingoGame */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DBD40FFD654FB395016EE418D5B025AA /* Build configuration list for PBXNativeTarget "BingoGame" */;
-			buildPhases = (
-				127F71B18E1A42306ED82357D7BA431A /* Headers */,
-				43F9F03E5C0B632F0CD8F8708FBC8A35 /* Sources */,
-				E96945B0FF659FFACAD5DC49AA500816 /* Frameworks */,
-				4EB1909CD7D81A0D6804900344A23FF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0F1A64EC410EB03DFC5A553D7F7351EF /* PBXTargetDependency */,
-			);
-			name = BingoGame;
-			productName = BingoGame;
-			productReference = 09A20E7AD73368E5A86A10A2A0E17BDA /* BingoGame.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7AC51665BA3673E06367038FFB279242 /* BingoGame-BingoGame */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D3053331143CB5B1B9C3059E70529FFB /* Build configuration list for PBXNativeTarget "BingoGame-BingoGame" */;
-			buildPhases = (
-				99F8D499AB69295ADF9D1106DB237FA4 /* Sources */,
-				C03DE1ACBED11B9EBE8FEB1855076E80 /* Frameworks */,
-				C202C58C89BE4A665DCFBD41A502B030 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "BingoGame-BingoGame";
-			productName = "BingoGame-BingoGame";
-			productReference = 26EB7B07F7701D2546477D5696837E22 /* BingoGame.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		A29E93EDFB7CC9AC88CC617212B6BC29 /* Pods-BingoGame_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 011EB21BC7FC0D64999D134BE046999F /* Build configuration list for PBXNativeTarget "Pods-BingoGame_Example" */;
@@ -399,6 +394,23 @@
 			productName = "Pods-BingoGame_Example";
 			productReference = 818862E43E4AF686695CF88473D353AD /* Pods_BingoGame_Example.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		DB1F4B0000C4E8E0B4541C7B5BAEE2D3 /* BingoGame-BingoGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90088BECD8370B4AA891E5482DD95CAC /* Build configuration list for PBXNativeTarget "BingoGame-BingoGame" */;
+			buildPhases = (
+				23A073C3F751E4A3A41822B40D003235 /* Sources */,
+				9C7750F9E828AAA9728FAAF0307E8A5D /* Frameworks */,
+				576FDF7DD30D67B11345812B24264CD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BingoGame-BingoGame";
+			productName = "BingoGame-BingoGame";
+			productReference = 26EB7B07F7701D2546477D5696837E22 /* BingoGame.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -421,8 +433,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C1F61EF2515EE04C0952E530F3A8151 /* BingoGame */,
-				7AC51665BA3673E06367038FFB279242 /* BingoGame-BingoGame */,
+				2A8BD71F1D6A126DB34D13076CDB3888 /* BingoGame */,
+				DB1F4B0000C4E8E0B4541C7B5BAEE2D3 /* BingoGame-BingoGame */,
 				A29E93EDFB7CC9AC88CC617212B6BC29 /* Pods-BingoGame_Example */,
 				2F923BFDB08142D865EBB905B11B6FDB /* Pods-BingoGame_Tests */,
 			);
@@ -437,11 +449,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EB1909CD7D81A0D6804900344A23FF7 /* Resources */ = {
+		576FDF7DD30D67B11345812B24264CD0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F74FEAB55ED0E563218FD64722DBBD3 /* BingoGame.bundle in Resources */,
+				41BA0BC719A4B40ADB10F8245F9409AA /* bingo-closed-card.pdf in Resources */,
+				69F662D104036237C5A7A6E6E6A96DDC /* BingoCardCollectionViewCell.xib in Resources */,
+				58A876D061A448C9EE5312A0E02B5716 /* BingoDeckViewController.xib in Resources */,
+				9C61E0A3D97620D37A495BC1261A5B99 /* BingoViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57AEEFEC674E233DB00415C82125383D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				691EBD67CCF91921E6F3058BBCC25963 /* BingoGame.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,35 +475,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C202C58C89BE4A665DCFBD41A502B030 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				431E6B6E864A58F2608F180EF4CA0C58 /* BingoCardCollectionViewCell.xib in Resources */,
-				551EBB54116A76C7E9CCB7A5480648B8 /* BingoDeckViewController.xib in Resources */,
-				DDFEB1ECBCF5FE15739BA3D1E3B902B0 /* BingoViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		43F9F03E5C0B632F0CD8F8708FBC8A35 /* Sources */ = {
+		23A073C3F751E4A3A41822B40D003235 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12A287D4E461B593D4B27A118A7F8BF /* BingoCard.swift in Sources */,
-				4409AB7CB95B769D8403889333AF53A2 /* BingoCardCollectionViewCell.swift in Sources */,
-				0D4472340B302EC9EC9E3F4F4C687674 /* BingoCardCollectionViewCell.xib in Sources */,
-				4643045F20722C09D5E32307D5937D88 /* BingoDeck.swift in Sources */,
-				D5EBAE7848D935A77AC02ED577FAC06D /* BingoDeckViewController.swift in Sources */,
-				EAB87BD421C7CD3F00F94FEB /* BingoDeckCollectionViewFlowLayout.swift in Sources */,
-				AA82404ABC56587909EB579C5067A461 /* BingoDeckViewController.xib in Sources */,
-				C0106D099166F731FE90AAB3B6714981 /* BingoGame-dummy.m in Sources */,
-				96369280EF509291128F8D0C38F6A3C5 /* BingoGame.swift in Sources */,
-				FFDDF6FF2F6BF858FCA6BB7E212EC3AC /* BingoPlayer.swift in Sources */,
-				95147B127D5B156BAC6FD937DE231960 /* BingoViewController.swift in Sources */,
-				6089B0F5E562967C233946AB8AEFB7F1 /* BingoViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,10 +493,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99F8D499AB69295ADF9D1106DB237FA4 /* Sources */ = {
+		9CC87F10A368EA455356821AA961878C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C0C5FAEC15EA43A42A11957C0095D9 /* BingoCard.swift in Sources */,
+				79A9D13C33EDB13E8304DF8733A1CC82 /* BingoCardCollectionViewCell.swift in Sources */,
+				72EE131191F7515DD6495258168E8169 /* BingoCardCollectionViewCell.xib in Sources */,
+				03D6455F5A5155BDD77103A9C6246263 /* BingoDeck.swift in Sources */,
+				2E2B9FF433F4444E679CAD3C8C4083D8 /* BingoDeckCollectionViewFlowLayout.swift in Sources */,
+				02944D567AD7F3093B44B860BED3ED09 /* BingoDeckViewController.swift in Sources */,
+				422729E191E69A551ABC82936886BEEA /* BingoDeckViewController.xib in Sources */,
+				5F8FA9A4C2B0861DFFF074A8F0AB4CC9 /* BingoGame-dummy.m in Sources */,
+				130964A0DFF1097B418C5682FF858F96 /* BingoGame.swift in Sources */,
+				CDE07BF2011E268B3A948F18360D8067 /* BingoPlayer.swift in Sources */,
+				08B96C35A34D5FEFAE08A10B9EF8A317 /* BingoViewController.swift in Sources */,
+				9C65AD839B671280CEFDD7AA18C574A9 /* BingoViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,16 +523,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0F1A64EC410EB03DFC5A553D7F7351EF /* PBXTargetDependency */ = {
+		02FDFD937A5CAD84C80D2AC6F7751EB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "BingoGame-BingoGame";
-			target = 7AC51665BA3673E06367038FFB279242 /* BingoGame-BingoGame */;
-			targetProxy = 2D416FF07175A620B9AB3ABC9614F580 /* PBXContainerItemProxy */;
+			target = DB1F4B0000C4E8E0B4541C7B5BAEE2D3 /* BingoGame-BingoGame */;
+			targetProxy = D7C5882BFAFF5CEF4FFADF1422C54EA4 /* PBXContainerItemProxy */;
 		};
 		45F69ADFF36C79756879A45BE2E384A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BingoGame;
-			target = 5C1F61EF2515EE04C0952E530F3A8151 /* BingoGame */;
+			target = 2A8BD71F1D6A126DB34D13076CDB3888 /* BingoGame */;
 			targetProxy = 608EF7B2812EC9126C33BBABF0D86F7C /* PBXContainerItemProxy */;
 		};
 		606A377D99F6EA79B90FF0FFCBC80C7C /* PBXTargetDependency */ = {
@@ -531,9 +544,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3010C7CA551ED8B0B2398241689AD456 /* Debug */ = {
+		1C8DEA35FED3FE0B1C98E766E943C852 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB10C6B2E11EA7AF337EBA3FEDD90997 /* BingoGame.xcconfig */;
+			baseConfigurationReference = D4379FBD609AB3DA98C95D8315617488 /* BingoGame.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -558,8 +571,25 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		26DC044FDF76CA5C59489915D24A19AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4379FBD609AB3DA98C95D8315617488 /* BingoGame.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BingoGame";
+				INFOPLIST_FILE = "Target Support Files/BingoGame/ResourceBundle-BingoGame-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = BingoGame;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -631,39 +661,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		6BFB48FA577ACB8BF0B56600916206C8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB10C6B2E11EA7AF337EBA3FEDD90997 /* BingoGame.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BingoGame/BingoGame-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BingoGame/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BingoGame/BingoGame.modulemap";
-				PRODUCT_MODULE_NAME = BingoGame;
-				PRODUCT_NAME = BingoGame;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		854E5B8F4671D77922992257D0745FCA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -754,27 +751,12 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		B4B535A3A0806AC5C5BD6C6DDE6A7A12 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB10C6B2E11EA7AF337EBA3FEDD90997 /* BingoGame.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BingoGame";
-				INFOPLIST_FILE = "Target Support Files/BingoGame/ResourceBundle-BingoGame-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_NAME = BingoGame;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
 		};
 		CA172BFF6A7430171296D5A4256F60D9 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -810,6 +792,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		DA396F2C7D18C726811D3C4B2ECF5189 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4379FBD609AB3DA98C95D8315617488 /* BingoGame.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BingoGame/BingoGame-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BingoGame/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BingoGame/BingoGame.modulemap";
+				PRODUCT_MODULE_NAME = BingoGame;
+				PRODUCT_NAME = BingoGame;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		E19471FE7E209D0818DAFB22D649A6E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -877,9 +891,9 @@
 			};
 			name = Debug;
 		};
-		E1CAC781DB7A2ECD65DE1EC785FFBC41 /* Release */ = {
+		FB533766A3378E247223958117FBF7A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB10C6B2E11EA7AF337EBA3FEDD90997 /* BingoGame.xcconfig */;
+			baseConfigurationReference = D4379FBD609AB3DA98C95D8315617488 /* BingoGame.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BingoGame";
@@ -914,29 +928,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8F62301E479F47B0BB6AF1215741EF55 /* Build configuration list for PBXNativeTarget "BingoGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA396F2C7D18C726811D3C4B2ECF5189 /* Debug */,
+				1C8DEA35FED3FE0B1C98E766E943C852 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90088BECD8370B4AA891E5482DD95CAC /* Build configuration list for PBXNativeTarget "BingoGame-BingoGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26DC044FDF76CA5C59489915D24A19AF /* Debug */,
+				FB533766A3378E247223958117FBF7A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CF2616C3F73754552E391152DDEA0B1E /* Build configuration list for PBXNativeTarget "Pods-BingoGame_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				854E5B8F4671D77922992257D0745FCA /* Debug */,
 				33817D294ED67C28AC74FF68821FB1CC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D3053331143CB5B1B9C3059E70529FFB /* Build configuration list for PBXNativeTarget "BingoGame-BingoGame" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B4B535A3A0806AC5C5BD6C6DDE6A7A12 /* Debug */,
-				E1CAC781DB7A2ECD65DE1EC785FFBC41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DBD40FFD654FB395016EE418D5B025AA /* Build configuration list for PBXNativeTarget "BingoGame" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3010C7CA551ED8B0B2398241689AD456 /* Debug */,
-				6BFB48FA577ACB8BF0B56600916206C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
