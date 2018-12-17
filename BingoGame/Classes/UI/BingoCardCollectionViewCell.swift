@@ -16,7 +16,8 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
     }
     
     public func render(card:BingoCard){
-        self.imageView.image = UIImage(named: "bingo-closed-card")
+        //self.imageView.image = UIImage(named: "bingo-closed-card")
+        self.imageView.image = UIImage(named: "bingo-card-\(card.name)")
     }
 
 }

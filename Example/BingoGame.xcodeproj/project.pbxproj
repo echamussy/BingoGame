@@ -15,6 +15,18 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		AFDE2BE943B4653E829D8885 /* Pods_BingoGame_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B056742A3EEE36D40437DD2F /* Pods_BingoGame_Tests.framework */; };
 		E6A34B7CF2B722014D71693E /* Pods_BingoGame_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB842E4A351378C99A5F5FD9 /* Pods_BingoGame_Example.framework */; };
+		EAB87C5721C7F38500F94FEB /* bingo-card-blackberry.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C4B21C7F38500F94FEB /* bingo-card-blackberry.png */; };
+		EAB87C5821C7F38500F94FEB /* bingo-card-banana.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C4C21C7F38500F94FEB /* bingo-card-banana.png */; };
+		EAB87C5921C7F38500F94FEB /* bingo-card-pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C4D21C7F38500F94FEB /* bingo-card-pineapple.png */; };
+		EAB87C5A21C7F38500F94FEB /* bingo-card-raspberry.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C4E21C7F38500F94FEB /* bingo-card-raspberry.png */; };
+		EAB87C5B21C7F38500F94FEB /* bingo-card-watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C4F21C7F38500F94FEB /* bingo-card-watermelon.png */; };
+		EAB87C5C21C7F38500F94FEB /* bingo-card-cherry.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5021C7F38500F94FEB /* bingo-card-cherry.png */; };
+		EAB87C5D21C7F38500F94FEB /* bingo-card-strawberry.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5121C7F38500F94FEB /* bingo-card-strawberry.png */; };
+		EAB87C5E21C7F38500F94FEB /* bingo-card-kiwi.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5221C7F38500F94FEB /* bingo-card-kiwi.png */; };
+		EAB87C5F21C7F38500F94FEB /* bingo-card-apple.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5321C7F38500F94FEB /* bingo-card-apple.png */; };
+		EAB87C6021C7F38500F94FEB /* bingo-card-avocado.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5421C7F38500F94FEB /* bingo-card-avocado.png */; };
+		EAB87C6121C7F38500F94FEB /* bingo-card-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5521C7F38500F94FEB /* bingo-card-orange.png */; };
+		EAB87C6221C7F38500F94FEB /* bingo-card-pear.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5621C7F38500F94FEB /* bingo-card-pear.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +57,18 @@
 		D10E0FFB8347BA806FC531FE /* Pods-BingoGame_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingoGame_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BingoGame_Tests/Pods-BingoGame_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DF6DB589A665885F6CC37125 /* BingoGame.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BingoGame.podspec; path = ../BingoGame.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E196CCB0142F19E2ACE8F003 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EAB87C4B21C7F38500F94FEB /* bingo-card-blackberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-blackberry.png"; sourceTree = "<group>"; };
+		EAB87C4C21C7F38500F94FEB /* bingo-card-banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-banana.png"; sourceTree = "<group>"; };
+		EAB87C4D21C7F38500F94FEB /* bingo-card-pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-pineapple.png"; sourceTree = "<group>"; };
+		EAB87C4E21C7F38500F94FEB /* bingo-card-raspberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-raspberry.png"; sourceTree = "<group>"; };
+		EAB87C4F21C7F38500F94FEB /* bingo-card-watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-watermelon.png"; sourceTree = "<group>"; };
+		EAB87C5021C7F38500F94FEB /* bingo-card-cherry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-cherry.png"; sourceTree = "<group>"; };
+		EAB87C5121C7F38500F94FEB /* bingo-card-strawberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-strawberry.png"; sourceTree = "<group>"; };
+		EAB87C5221C7F38500F94FEB /* bingo-card-kiwi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-kiwi.png"; sourceTree = "<group>"; };
+		EAB87C5321C7F38500F94FEB /* bingo-card-apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-apple.png"; sourceTree = "<group>"; };
+		EAB87C5421C7F38500F94FEB /* bingo-card-avocado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-avocado.png"; sourceTree = "<group>"; };
+		EAB87C5521C7F38500F94FEB /* bingo-card-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-orange.png"; sourceTree = "<group>"; };
+		EAB87C5621C7F38500F94FEB /* bingo-card-pear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-pear.png"; sourceTree = "<group>"; };
 		F52CD89CB9E747A4CEC8D50C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FB842E4A351378C99A5F5FD9 /* Pods_BingoGame_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingoGame_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +96,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				EAB87BFD21C7F1B700F94FEB /* Assets */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for BingoGame */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -157,6 +182,34 @@
 				B056742A3EEE36D40437DD2F /* Pods_BingoGame_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAB87BFD21C7F1B700F94FEB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EAB87BFE21C7F1B700F94FEB /* FruitCards */,
+			);
+			name = Assets;
+			path = BingoGame/Assets;
+			sourceTree = "<group>";
+		};
+		EAB87BFE21C7F1B700F94FEB /* FruitCards */ = {
+			isa = PBXGroup;
+			children = (
+				EAB87C5321C7F38500F94FEB /* bingo-card-apple.png */,
+				EAB87C5421C7F38500F94FEB /* bingo-card-avocado.png */,
+				EAB87C4C21C7F38500F94FEB /* bingo-card-banana.png */,
+				EAB87C4B21C7F38500F94FEB /* bingo-card-blackberry.png */,
+				EAB87C5021C7F38500F94FEB /* bingo-card-cherry.png */,
+				EAB87C5221C7F38500F94FEB /* bingo-card-kiwi.png */,
+				EAB87C5521C7F38500F94FEB /* bingo-card-orange.png */,
+				EAB87C5621C7F38500F94FEB /* bingo-card-pear.png */,
+				EAB87C4D21C7F38500F94FEB /* bingo-card-pineapple.png */,
+				EAB87C4E21C7F38500F94FEB /* bingo-card-raspberry.png */,
+				EAB87C5121C7F38500F94FEB /* bingo-card-strawberry.png */,
+				EAB87C4F21C7F38500F94FEB /* bingo-card-watermelon.png */,
+			);
+			path = FruitCards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +299,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB87C5A21C7F38500F94FEB /* bingo-card-raspberry.png in Resources */,
+				EAB87C6121C7F38500F94FEB /* bingo-card-orange.png in Resources */,
+				EAB87C5E21C7F38500F94FEB /* bingo-card-kiwi.png in Resources */,
+				EAB87C5C21C7F38500F94FEB /* bingo-card-cherry.png in Resources */,
+				EAB87C5721C7F38500F94FEB /* bingo-card-blackberry.png in Resources */,
+				EAB87C5F21C7F38500F94FEB /* bingo-card-apple.png in Resources */,
+				EAB87C5821C7F38500F94FEB /* bingo-card-banana.png in Resources */,
+				EAB87C6221C7F38500F94FEB /* bingo-card-pear.png in Resources */,
+				EAB87C5D21C7F38500F94FEB /* bingo-card-strawberry.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				EAB87C6021C7F38500F94FEB /* bingo-card-avocado.png in Resources */,
+				EAB87C5B21C7F38500F94FEB /* bingo-card-watermelon.png in Resources */,
+				EAB87C5921C7F38500F94FEB /* bingo-card-pineapple.png in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
