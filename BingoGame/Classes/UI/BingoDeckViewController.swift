@@ -54,7 +54,7 @@ extension BingoDeckViewController:UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! BingoCardCollectionViewCell
         let card = self.deck.cards[indexPath.row]
         
-        cell.render(card: card)
+        cell.render(card: card, inDeck:self.deck)
         
         /*
         cell.makeCurvedCorners(5.0)

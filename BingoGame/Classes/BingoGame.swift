@@ -102,7 +102,7 @@ private extension BingoGame{
     
     private func configureMainDeck(){
         if mainDeck != nil { mainDeck.reset() }
-        self.mainDeck = BingoDeck(cards: self.configuration.availableCards)
+        self.mainDeck = BingoDeck(cards: self.configuration.availableCards, type:.mainDeck)
         self.mainDeck.shuffle()
     }
     
@@ -118,7 +118,7 @@ private extension BingoGame{
             let endIndex = ((playerIndex + 1) * numberOfCardsPerPlayer) - 1
             
             let playerCards = Array(shuffledCardsForPlayers[startIndex...endIndex])
-            let playerDeck = BingoDeck(cards: playerCards)
+            let playerDeck = BingoDeck(cards: playerCards, type:.playerDeck)
             
             let player = BingoPlayer(playerId:playerId, assignedDeck:playerDeck)
             self.players.append(player)

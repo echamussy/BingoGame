@@ -15,9 +15,13 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    public func render(card:BingoCard){
-        //self.imageView.image = UIImage(named: "bingo-closed-card")
-        self.imageView.image = UIImage(named: "bingo-card-\(card.name)")
+    public func render(card:BingoCard, inDeck:BingoDeck){
+        switch inDeck.type {
+        case .mainDeck:
+            self.imageView.image = UIImage(named: "bingo-closed-card")
+        case .playerDeck:
+            self.imageView.image = UIImage(named: "bingo-card-\(card.name)")
+        }
     }
 
 }
