@@ -72,7 +72,14 @@ extension BingoDeckViewController:UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if self.deck.type == .mainDeck{
             let card = self.deck.cards[indexPath.row]
-            self.delegate?.bingoDeck(self, cardOpened: card)
+            
+            if self.deck.openedCards.contains(card){
+                // Card is already opened
+            } else {
+                let cellSelected = self.collectionView.cellForItem(at: indexPath) as! BingoCardCollectionViewCell
+                cellSelected.upTurn()
+                self.delegate?.bingoDeck(self, cardOpened: card)
+            }
         } else {
             // Ignoring as the player deck does not have interaction directly
         }
