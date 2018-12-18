@@ -26,7 +26,7 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
             self.imageView.image = UIImage(named: "bingo-closed-card")
         case .playerDeck:
             self.imageView.image = UIImage(named: "bingo-card-\(card.name)")
-            self.imageView.alpha = 0.75
+            self.imageView.alpha = 0.5
         }
     }
     
@@ -42,15 +42,21 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
     public func animateFound(){
         if let animationPath = Bundle(for:BingoCardCollectionViewCell.self).path(forResource: "favourite_app_icon", ofType: "json"){
             let lottieView = LOTAnimationView(filePath: animationPath)
-            lottieView.frame = CGRect(x: 0, y: 0,
-                                      width: self.animationView.frame.size.width,
-                                      height: self.animationView.frame.size.height)
+            lottieView.frame = CGRect(x: ((self.animationView.frame.size.width / 2) * -1),
+                                      y: ((self.animationView.frame.size.height / 2) * -1),
+                                      width: self.animationView.frame.size.width * 2,
+                                      height: self.animationView.frame.size.height * 2)
             lottieView.loopAnimation = false
             
-            self.animationView.addSubview(lottieView)
-            lottieView.play { (_) in
-                lottieView.removeFromSuperview()
-                self.imageView.alpha = 1.0
+            self.imageView.alpha = 0.2
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.animationView.addSubview(lottieView)
+                lottieView.play { (_) in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        lottieView.removeFromSuperview()
+                        self.imageView.alpha = 1.0
+                    }
+                }
             }
         }
     }
