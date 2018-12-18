@@ -7,15 +7,21 @@
 
 import UIKit
 
+protocol BingoDeckViewControllerDelegate:class{
+    func bingoDeck(_ bingoDeckViewController:BingoDeckViewController, cardOpened:BingoCard)
+}
+
 class BingoDeckViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var deck:BingoDeck
+    private var deck:BingoDeck
+    private weak var delegate:BingoDeckViewControllerDelegate?
     
     // MARK: Initializers
-    init(deck:BingoDeck) {
+    init(deck:BingoDeck, delegate:BingoDeckViewControllerDelegate? = nil) {
         self.deck = deck
+        self.delegate = delegate
         let bundle = Bundle(for: BingoDeckViewController.self)
         super.init(nibName: "BingoDeckViewController", bundle: bundle)
     }
@@ -56,13 +62,6 @@ extension BingoDeckViewController:UICollectionViewDataSource{
         
         cell.render(card: card, inDeck:self.deck)
         
-        /*
-        cell.makeCurvedCorners(5.0)
-        cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.layer.borderWidth = 1.0
-        cell.imageObject = self.images[indexPath.row]
-        cell.render()*/
-        
         return cell
     }
     
@@ -70,6 +69,12 @@ extension BingoDeckViewController:UICollectionViewDataSource{
 
 extension BingoDeckViewController:UICollectionViewDelegate {
     
-    
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if self.deck.type == .mainDeck{
+            let card = self.deck.cards[indexPath.row]
+            self.delegate?.bingoDeck(self, cardOpened: card)
+        } else {
+            // Ignoring as the player deck does not have interaction directly
+        }
+    }
 }

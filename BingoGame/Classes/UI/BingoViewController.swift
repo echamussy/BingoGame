@@ -25,7 +25,7 @@ public class BingoViewController: UIViewController {
                                      inView: self.localPlayerViewContainer,
                                      parentViewController: self)
         
-        let mainDeckViewController = BingoDeckViewController(deck:self.bingoGame.mainDeck)
+        let mainDeckViewController = BingoDeckViewController(deck:self.bingoGame.mainDeck, delegate:self)
         BingoViewController.addChild(viewController: mainDeckViewController,
                                      inView: self.mainDeckViewContainer,
                                      parentViewController: self)
@@ -94,6 +94,17 @@ extension BingoViewController:BingoGameDelegate{
         self.bingoGame.printGameStatus()
     }
     
-    
+}
+
+extension BingoViewController:BingoDeckViewControllerDelegate{
+
+    func bingoDeck(_ bingoDeckViewController: BingoDeckViewController, cardOpened: BingoCard) {
+        if let cardIndex = self.bingoGame.mainDeck.cards.index(of:cardOpened){
+            self.bingoGame.openCard(atIndex: cardIndex)
+        } else {
+            print("Card was not found in deck!!!")
+            assert(false)
+        }
+    }
     
 }
