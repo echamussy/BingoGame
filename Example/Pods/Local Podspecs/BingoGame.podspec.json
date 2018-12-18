@@ -21,9 +21,13 @@
   "source_files": "BingoGame/Classes/**/*",
   "resource_bundles": {
     "BingoGame": [
-      "BingoGame/Assets/*.png",
-      "BingoGame/Assets/*.pdf",
+      "BingoGame/Classes/UI/**/*.json",
       "BingoGame/Classes/UI/**/*.xib"
+    ]
+  },
+  "dependencies": {
+    "lottie-ios": [
+
     ]
   }
 }

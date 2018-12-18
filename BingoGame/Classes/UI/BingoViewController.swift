@@ -13,6 +13,10 @@ public class BingoViewController: UIViewController {
     @IBOutlet weak var mainDeckViewContainer: UIView!
     @IBOutlet weak var remotePlayerViewContainer: UIView!
     
+    private var localPlayerDeckViewController:BingoDeckViewController!
+    private var remotePlayerDeckViewController:BingoDeckViewController!
+    private var mainDeckViewController:BingoDeckViewController!
+    
     var bingoGame:BingoGame!
     
     override public func viewDidLoad() {
@@ -20,17 +24,17 @@ public class BingoViewController: UIViewController {
         
         self.setupGame()
         
-        let localPlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[0].assignedDeck)
+        self.localPlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[0].assignedDeck)
         BingoViewController.addChild(viewController: localPlayerDeckViewController,
                                      inView: self.localPlayerViewContainer,
                                      parentViewController: self)
         
-        let mainDeckViewController = BingoDeckViewController(deck:self.bingoGame.mainDeck, delegate:self)
+        self.mainDeckViewController = BingoDeckViewController(deck:self.bingoGame.mainDeck, delegate:self)
         BingoViewController.addChild(viewController: mainDeckViewController,
                                      inView: self.mainDeckViewContainer,
                                      parentViewController: self)
         
-        let remotePlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[1].assignedDeck)
+        self.remotePlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[1].assignedDeck)
         BingoViewController.addChild(viewController: remotePlayerDeckViewController,
                                      inView: self.remotePlayerViewContainer,
                                      parentViewController: self)
@@ -86,7 +90,8 @@ extension BingoViewController:BingoGameDelegate{
     }
     
     public func bingoGame(_ game: BingoGame, cardOpened: BingoCard) {
-        
+        self.localPlayerDeckViewController.handleOpened(card:cardOpened)
+        self.remotePlayerDeckViewController.handleOpened(card:cardOpened)
     }
     
     public func bingoGame(_ game: BingoGame, deckCompleted byPlayer: BingoPlayer) {

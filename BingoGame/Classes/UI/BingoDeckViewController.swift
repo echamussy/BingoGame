@@ -47,6 +47,18 @@ class BingoDeckViewController: UIViewController {
         super.viewDidLayoutSubviews()
         self.collectionView.collectionViewLayout.invalidateLayout()
     }
+    
+    // MARK: Public methods
+    
+    public func handleOpened(card:BingoCard){
+        if self.deck.cards.contains(card){
+            if let cardIndex = self.deck.cards.index(of:card){
+                let indexPath = IndexPath(row: cardIndex, section: 0)
+                let cellSelected = self.collectionView.cellForItem(at: indexPath) as! BingoCardCollectionViewCell
+                cellSelected.animateFound()
+            }
+        }
+    }
 
 }
 

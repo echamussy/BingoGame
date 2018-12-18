@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class BingoCardCollectionViewCell: UICollectionViewCell {
 
@@ -24,6 +25,7 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
             self.imageView.image = UIImage(named: "bingo-closed-card")
         case .playerDeck:
             self.imageView.image = UIImage(named: "bingo-card-\(card.name)")
+            self.imageView.alpha = 0.75
         }
     }
     
@@ -34,6 +36,23 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
                           animations: {
                             self.imageView.image = UIImage(named: "bingo-card-\(self.card.name)")
         }, completion: nil)
+    }
+    
+    public func animateFound(){
+        //Bundle.main.path(forResource: "favourite_app_icon", ofType: "json"){
+        if let animationPath = Bundle(for:BingoCardCollectionViewCell.self).path(forResource: "favourite_app_icon", ofType: "json"){
+            let lottieView = LOTAnimationView(filePath: animationPath)
+            lottieView.frame = CGRect(x: 0, y: 0,
+                                      width: self.imageView.frame.size.width,
+                                      height: self.imageView.frame.size.height)
+            lottieView.loopAnimation = false
+            
+            self.addSubview(lottieView)
+            lottieView.play { (_) in
+                lottieView.removeFromSuperview()
+                self.imageView.alpha = 1.0
+            }
+        }
     }
 
 }
