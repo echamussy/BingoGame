@@ -11,6 +11,7 @@ import Lottie
 class BingoCardCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var animationView: UIView!
     
     private var card:BingoCard!
     
@@ -39,15 +40,14 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
     }
     
     public func animateFound(){
-        //Bundle.main.path(forResource: "favourite_app_icon", ofType: "json"){
         if let animationPath = Bundle(for:BingoCardCollectionViewCell.self).path(forResource: "favourite_app_icon", ofType: "json"){
             let lottieView = LOTAnimationView(filePath: animationPath)
             lottieView.frame = CGRect(x: 0, y: 0,
-                                      width: self.imageView.frame.size.width,
-                                      height: self.imageView.frame.size.height)
+                                      width: self.animationView.frame.size.width,
+                                      height: self.animationView.frame.size.height)
             lottieView.loopAnimation = false
             
-            self.addSubview(lottieView)
+            self.animationView.addSubview(lottieView)
             lottieView.play { (_) in
                 lottieView.removeFromSuperview()
                 self.imageView.alpha = 1.0

@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BingoGame: bbb130fe26c33b8883c04cf096ec1c5f6c524a5d
+  BingoGame: 6b3e03f69dba8e7e8394a4cad5ba1f495c8fb4f1
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
 
 PODFILE CHECKSUM: 38d4614f46899146b4445972ec4386836bdfd974

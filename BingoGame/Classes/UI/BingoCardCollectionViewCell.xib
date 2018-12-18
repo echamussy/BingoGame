@@ -26,18 +26,27 @@
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="luS-8u-sY4"/>
                         </constraints>
                     </imageView>
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e80-x5-DGR">
+                        <rect key="frame" x="158.5" y="92.5" width="100" height="100"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="e80-x5-DGR" firstAttribute="centerX" secondItem="n42-6y-Nnx" secondAttribute="centerX" id="GLB-Tw-srR"/>
                 <constraint firstItem="n42-6y-Nnx" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="UkO-bQ-fCJ"/>
+                <constraint firstItem="e80-x5-DGR" firstAttribute="height" secondItem="n42-6y-Nnx" secondAttribute="height" id="YmF-uV-o7m"/>
                 <constraint firstItem="n42-6y-Nnx" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" priority="750" id="iHJ-fJ-ynl"/>
+                <constraint firstItem="e80-x5-DGR" firstAttribute="centerY" secondItem="n42-6y-Nnx" secondAttribute="centerY" id="j5g-Sd-ypH"/>
                 <constraint firstItem="n42-6y-Nnx" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" priority="750" id="scB-XE-l4U"/>
+                <constraint firstItem="e80-x5-DGR" firstAttribute="width" secondItem="n42-6y-Nnx" secondAttribute="width" id="u8d-D9-bvY"/>
                 <constraint firstItem="n42-6y-Nnx" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="w3W-40-Ri0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="447" height="260"/>
             <connections>
+                <outlet property="animationView" destination="e80-x5-DGR" id="gG0-Rl-vCo"/>
                 <outlet property="imageView" destination="n42-6y-Nnx" id="0j7-wA-4mD"/>
             </connections>
             <point key="canvasLocation" x="389.60000000000002" y="119.1904047976012"/>
