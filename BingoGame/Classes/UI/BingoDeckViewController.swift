@@ -59,9 +59,7 @@ class BingoDeckViewController: UIViewController {
             }
         }
     }
-
 }
-
 
 extension BingoDeckViewController:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -89,8 +87,9 @@ extension BingoDeckViewController:UICollectionViewDelegate {
                 // Card is already opened
             } else {
                 let cellSelected = self.collectionView.cellForItem(at: indexPath) as! BingoCardCollectionViewCell
-                cellSelected.upTurn()
-                self.delegate?.bingoDeck(self, cardOpened: card)
+                cellSelected.upTurn {
+                    self.delegate?.bingoDeck(self, cardOpened: card)
+                }
             }
         } else {
             // Ignoring as the player deck does not have interaction directly
