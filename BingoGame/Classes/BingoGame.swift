@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BingoGameConfiguration{
+public struct BingoGameConfiguration:Codable{
 
     public let playerIds:Array<String>
     public let availableCards:Array<BingoCard> // Should always be dividable by number of players with remainder 0
