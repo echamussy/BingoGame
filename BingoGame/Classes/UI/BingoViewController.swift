@@ -12,18 +12,39 @@ public class BingoViewController: UIViewController {
     @IBOutlet weak var localPlayerViewContainer: UIView!
     @IBOutlet weak var mainDeckViewContainer: UIView!
     @IBOutlet weak var remotePlayerViewContainer: UIView!
+    @IBOutlet weak var localPlayerLabel: UILabel!
+    @IBOutlet weak var remotePlayerLabel: UILabel!
     
     private var localPlayerDeckViewController:BingoDeckViewController!
     private var remotePlayerDeckViewController:BingoDeckViewController!
     private var mainDeckViewController:BingoDeckViewController!
     
-    var bingoGame:BingoGame!
+    private var bingoGame:BingoGame!
+    private var gameConfiguration:BingoGameConfiguration
+    
+    // MARK: Initializers
+    public init(gameConfiguration:BingoGameConfiguration) {
+        self.gameConfiguration = gameConfiguration
+        let bundle = Bundle(for: BingoViewController.self)
+        super.init(nibName: "BingoViewController", bundle: bundle)
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: View lifecycle
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupGame()
-        
+        self.setupUI()
+        self.updateScoreLabels()
+    }
+    
+    // MARK: Private methods
+    private func setupUI(){
         self.localPlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[0].assignedDeck)
         BingoViewController.addChild(viewController: localPlayerDeckViewController,
                                      inView: self.localPlayerViewContainer,
@@ -38,19 +59,19 @@ public class BingoViewController: UIViewController {
         BingoViewController.addChild(viewController: remotePlayerDeckViewController,
                                      inView: self.remotePlayerViewContainer,
                                      parentViewController: self)
-        
-        
-        
+
     }
     
-    // MARK: Private methods
-    
     private func setupGame(){
-        let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "avocado", "banana", "blackberry", "cherry", "kiwi", "orange", "pear", "pineapple", "raspberry", "strawberry", "watermelon"])
-        let gameConfiguration = BingoGameConfiguration(playerIds:["Emma", "Manuel"],
-                                                       availableCards:cardArray)
-        self.bingoGame = BingoGame(configuration: gameConfiguration, delegate:self)
+        self.bingoGame = BingoGame(configuration: self.gameConfiguration, delegate:self)
         self.bingoGame.startGame()
+    }
+    
+    private func updateScoreLabels(){
+        let localPlayer = self.bingoGame.players[0]
+        self.localPlayerLabel.text = "\(localPlayer.playerId): \(localPlayer.assignedDeck.openedCards.count)"
+        let remotePlayer = self.bingoGame.players[1]
+        self.remotePlayerLabel.text = "\(remotePlayer.playerId): \(remotePlayer.assignedDeck.openedCards.count)"
     }
     
     
@@ -92,6 +113,7 @@ extension BingoViewController:BingoGameDelegate{
     public func bingoGame(_ game: BingoGame, cardOpened: BingoCard) {
         self.localPlayerDeckViewController.handleOpened(card:cardOpened)
         self.remotePlayerDeckViewController.handleOpened(card:cardOpened)
+        self.updateScoreLabels()
     }
     
     public func bingoGame(_ game: BingoGame, deckCompleted byPlayer: BingoPlayer) {

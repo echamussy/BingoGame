@@ -18,8 +18,12 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let podBundle = Bundle(for:BingoViewController.self)
-        let bingoViewController = BingoViewController(nibName: "BingoViewController", bundle: podBundle)
+        let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "avocado", "banana", "blackberry", "cherry", "kiwi", "orange", "pear", "pineapple", "raspberry", "strawberry", "watermelon"])
+        let gameConfiguration = BingoGameConfiguration(playerIds:["Emma", "Manuel"],
+                                                       availableCards:cardArray,
+                                                       shuffleCardsAtStart:false)
+        
+        let bingoViewController = BingoViewController(gameConfiguration:gameConfiguration)
         self.present(bingoViewController, animated: false, completion: nil)
     }
 }

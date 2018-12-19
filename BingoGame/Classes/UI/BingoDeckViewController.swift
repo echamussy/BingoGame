@@ -40,6 +40,9 @@ class BingoDeckViewController: UIViewController {
         let collectionViewLayout = BingoDeckCollectionViewFlowLayout(deck:self.deck)
         self.collectionView.setCollectionViewLayout(collectionViewLayout, animated: false)
         
+        self.view.layer.masksToBounds = true
+        self.view.layer.cornerRadius = 5.0
+
         let bundle = Bundle(for: BingoCardCollectionViewCell.self)
         self.collectionView.register(UINib(nibName: "BingoCardCollectionViewCell", bundle: bundle), forCellWithReuseIdentifier: "cardCell")
         self.collectionView.delegate = self
