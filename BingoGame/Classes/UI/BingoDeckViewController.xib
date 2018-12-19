@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BingoDeckViewController" customModule="BingoGame" customModuleProvider="target">
             <connections>
+                <outlet property="animationView" destination="xIb-IA-neQ" id="yNj-Ym-9JW"/>
                 <outlet property="collectionView" destination="6E4-m7-q8f" id="7Su-Tl-MD5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,6 +32,10 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIb-IA-neQ">
+                    <rect key="frame" x="0.0" y="0.0" width="592" height="623"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.28874933180000001" green="0.24246819659999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -38,10 +43,14 @@
                 <constraint firstItem="6E4-m7-q8f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ajk-Zi-phs"/>
                 <constraint firstItem="6E4-m7-q8f" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KmH-WE-e88"/>
                 <constraint firstItem="6E4-m7-q8f" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="NtP-7h-TRJ"/>
+                <constraint firstItem="xIb-IA-neQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="RqU-Rb-MeA"/>
+                <constraint firstItem="xIb-IA-neQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Rvg-Py-p6h"/>
+                <constraint firstItem="xIb-IA-neQ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="uTm-g6-7Lc"/>
+                <constraint firstItem="xIb-IA-neQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y8m-Vv-1Tv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-12.800000000000001" y="119.1904047976012"/>
+            <point key="canvasLocation" x="-204.80000000000001" y="86.806596701649184"/>
         </view>
     </objects>
 </document>

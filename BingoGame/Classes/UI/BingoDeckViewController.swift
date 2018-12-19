@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 protocol BingoDeckViewControllerDelegate:class{
     func bingoDeck(_ bingoDeckViewController:BingoDeckViewController, cardOpened:BingoCard)
@@ -14,6 +15,7 @@ protocol BingoDeckViewControllerDelegate:class{
 class BingoDeckViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var animationView: UIView!
     
     private var deck:BingoDeck
     private weak var delegate:BingoDeckViewControllerDelegate?
@@ -34,6 +36,7 @@ class BingoDeckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.animationView.isHidden = true
         let collectionViewLayout = BingoDeckCollectionViewFlowLayout(deck:self.deck)
         self.collectionView.setCollectionViewLayout(collectionViewLayout, animated: false)
         
@@ -55,10 +58,34 @@ class BingoDeckViewController: UIViewController {
             if let cardIndex = self.deck.cards.index(of:card){
                 let indexPath = IndexPath(row: cardIndex, section: 0)
                 let cellSelected = self.collectionView.cellForItem(at: indexPath) as! BingoCardCollectionViewCell
-                cellSelected.animateFound()
+                cellSelected.animateFound {
+                    self.checkIfWinner()
+                }
             }
         }
     }
+    
+    // MARK: Private methods
+    
+    private func checkIfWinner(){
+        if self.deck.cards.count == self.deck.openedCards.count{
+            // We have copleted our deck
+            if let animationPath = Bundle(for:BingoCardCollectionViewCell.self).path(forResource: "trophy", ofType: "json"){
+                let lottieView = LOTAnimationView(filePath: animationPath)
+                lottieView.contentMode = .scaleAspectFit
+                lottieView.frame = self.animationView.frame
+                lottieView.loopAnimation = false
+                
+                self.animationView.isHidden = false
+                self.collectionView.isHidden = true
+                self.animationView.addSubview(lottieView)
+                lottieView.play { (_) in
+                    
+                }
+            }
+        }
+    }
+
 }
 
 extension BingoDeckViewController:UICollectionViewDataSource{

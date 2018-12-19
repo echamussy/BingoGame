@@ -46,7 +46,7 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
         })
     }
     
-    public func animateFound(){
+    public func animateFound(completion: (@escaping () -> Void)){
         if let animationPath = Bundle(for:BingoCardCollectionViewCell.self).path(forResource: "favourite_app_icon", ofType: "json"){
             let lottieView = LOTAnimationView(filePath: animationPath)
             lottieView.contentMode = .scaleAspectFit
@@ -63,6 +63,7 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     lottieView.removeFromSuperview()
                     self.imageView.alpha = 1.0
+                    completion()
                 }
             }
         
