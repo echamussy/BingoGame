@@ -8,13 +8,20 @@
 import Foundation
 import GameKit
 
+public enum BingoDeckType:Int{
+    case mainDeck
+    case playerDeck
+}
+
 public class BingoDeck{
     
+    public private(set) var type:BingoDeckType
     public private(set) var cards:Array<BingoCard>
     public private(set) var openedCards:Array<BingoCard>
     
-    public init(cards:Array<BingoCard>){
+    public init(cards:Array<BingoCard>, type:BingoDeckType){
         self.cards = cards
+        self.type = type
         self.openedCards = []
     }
     

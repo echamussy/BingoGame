@@ -11,10 +11,12 @@ public struct BingoGameConfiguration{
 
     public let playerIds:Array<String>
     public let availableCards:Array<BingoCard> // Should always be dividable by number of players with remainder 0
+    public let shuffleCardsAtStart:Bool
 
-    public init(playerIds:Array<String>, availableCards:Array<BingoCard>){
+    public init(playerIds:Array<String>, availableCards:Array<BingoCard>, shuffleCardsAtStart:Bool){
         self.playerIds = playerIds
         self.availableCards = availableCards
+        self.shuffleCardsAtStart = shuffleCardsAtStart
     }
 }
 
@@ -102,8 +104,8 @@ private extension BingoGame{
     
     private func configureMainDeck(){
         if mainDeck != nil { mainDeck.reset() }
-        self.mainDeck = BingoDeck(cards: self.configuration.availableCards)
-        self.mainDeck.shuffle()
+        self.mainDeck = BingoDeck(cards: self.configuration.availableCards, type:.mainDeck)
+        if self.configuration.shuffleCardsAtStart { self.mainDeck.shuffle() }
     }
     
     private func configureUsers(){
@@ -111,14 +113,14 @@ private extension BingoGame{
         
         var playerIndex = 0
         let numberOfCardsPerPlayer = Int(self.mainDeck.cards.count / self.configuration.playerIds.count)
-        let shuffledCardsForPlayers = self.mainDeck.cards.shuffled()
+        let cardsForPlayers = (self.configuration.shuffleCardsAtStart ? self.mainDeck.cards.shuffled() : self.mainDeck.cards)
         
         self.configuration.playerIds.forEach { (playerId) in
             let startIndex = playerIndex * numberOfCardsPerPlayer
             let endIndex = ((playerIndex + 1) * numberOfCardsPerPlayer) - 1
             
-            let playerCards = Array(shuffledCardsForPlayers[startIndex...endIndex])
-            let playerDeck = BingoDeck(cards: playerCards)
+            let playerCards = Array(cardsForPlayers[startIndex...endIndex])
+            let playerDeck = BingoDeck(cards: playerCards, type:.playerDeck)
             
             let player = BingoPlayer(playerId:playerId, assignedDeck:playerDeck)
             self.players.append(player)

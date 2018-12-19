@@ -11,40 +11,20 @@ import BingoGame
 
 class ViewController: UIViewController {
 
-    var bingoGame:BingoGame!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "lemon", "rasberry", "blueberry", "orange", "paprika", "corn", "brocoli", "mushroom", "pineapple", "strawberry", "apple"])
+        let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "avocado", "banana", "blackberry", "cherry", "kiwi", "orange", "pear", "pineapple", "raspberry", "strawberry", "watermelon"])
         let gameConfiguration = BingoGameConfiguration(playerIds:["Emma", "Manuel"],
-                                                       availableCards:cardArray)
-        self.bingoGame = BingoGame(configuration: gameConfiguration, delegate:self)
-        self.bingoGame.startGame()
+                                                       availableCards:cardArray,
+                                                       shuffleCardsAtStart:false)
         
-        // Play the game!
-        for i in 0...(cardArray.count - 1) {
-            self.bingoGame.openCard(atIndex: i)
-        }
+        let bingoViewController = BingoGameViewController(gameConfiguration:gameConfiguration)
+        self.present(bingoViewController, animated: false, completion: nil)
     }
-}
-
-extension ViewController:BingoGameDelegate{
-    
-    func bingoGameDidStart(_ game: BingoGame) {
-        
-    }
-    
-    func bingoGame(_ game: BingoGame, cardOpened: BingoCard) {
-        
-    }
-    
-    func bingoGame(_ game: BingoGame, deckCompleted byPlayer: BingoPlayer) {
-        print("Player '\(byPlayer.playerId)' completed deck!")
-        self.bingoGame.printGameStatus()
-    }
-    
-    
-    
 }
 
