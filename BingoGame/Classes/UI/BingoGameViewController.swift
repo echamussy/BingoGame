@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol BingoGameViewControllerDelegate {
+    func bingoGame(viewController:BingoGameViewController, shouldAllowOpenCard:BingoCard)->Bool
+}
+
 public class BingoGameViewController: UIViewController {
 
     @IBOutlet weak var localPlayerViewContainer: UIView!
