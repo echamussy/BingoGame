@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BingoViewController" customModule="BingoGame" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BingoGameViewController" customModule="BingoGame" customModuleProvider="target">
             <connections>
                 <outlet property="localPlayerLabel" destination="ig3-Yd-RJy" id="Nkc-gN-K4G"/>
                 <outlet property="localPlayerViewContainer" destination="TsV-aI-Too" id="Med-Vs-RW4"/>

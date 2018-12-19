@@ -23,7 +23,7 @@ class ViewController: UIViewController {
                                                        availableCards:cardArray,
                                                        shuffleCardsAtStart:false)
         
-        let bingoViewController = BingoViewController(gameConfiguration:gameConfiguration)
+        let bingoViewController = BingoGameViewController(gameConfiguration:gameConfiguration)
         self.present(bingoViewController, animated: false, completion: nil)
     }
 }

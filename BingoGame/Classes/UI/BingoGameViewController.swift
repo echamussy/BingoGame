@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class BingoViewController: UIViewController {
+public class BingoGameViewController: UIViewController {
 
     @IBOutlet weak var localPlayerViewContainer: UIView!
     @IBOutlet weak var mainDeckViewContainer: UIView!
@@ -25,8 +25,8 @@ public class BingoViewController: UIViewController {
     // MARK: Initializers
     public init(gameConfiguration:BingoGameConfiguration) {
         self.gameConfiguration = gameConfiguration
-        let bundle = Bundle(for: BingoViewController.self)
-        super.init(nibName: "BingoViewController", bundle: bundle)
+        let bundle = Bundle(for: BingoGameViewController.self)
+        super.init(nibName: "BingoGameViewController", bundle: bundle)
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -46,17 +46,17 @@ public class BingoViewController: UIViewController {
     // MARK: Private methods
     private func setupUI(){
         self.localPlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[0].assignedDeck)
-        BingoViewController.addChild(viewController: localPlayerDeckViewController,
+        BingoGameViewController.addChild(viewController: localPlayerDeckViewController,
                                      inView: self.localPlayerViewContainer,
                                      parentViewController: self)
         
         self.mainDeckViewController = BingoDeckViewController(deck:self.bingoGame.mainDeck, delegate:self)
-        BingoViewController.addChild(viewController: mainDeckViewController,
+        BingoGameViewController.addChild(viewController: mainDeckViewController,
                                      inView: self.mainDeckViewContainer,
                                      parentViewController: self)
         
         self.remotePlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[1].assignedDeck)
-        BingoViewController.addChild(viewController: remotePlayerDeckViewController,
+        BingoGameViewController.addChild(viewController: remotePlayerDeckViewController,
                                      inView: self.remotePlayerViewContainer,
                                      parentViewController: self)
 
@@ -97,14 +97,14 @@ public class BingoViewController: UIViewController {
         parentViewController.addChild(viewController)
         inView.addSubview(childView)
         viewController.didMove(toParent: parentViewController)
-        BingoViewController.addConstraintsTo(parentView: inView,
+        BingoGameViewController.addConstraintsTo(parentView: inView,
                                          childView: childView)
         
     }
 
 }
 
-extension BingoViewController:BingoGameDelegate{
+extension BingoGameViewController:BingoGameDelegate{
     
     public func bingoGameDidStart(_ game: BingoGame) {
         
@@ -123,7 +123,7 @@ extension BingoViewController:BingoGameDelegate{
     
 }
 
-extension BingoViewController:BingoDeckViewControllerDelegate{
+extension BingoGameViewController:BingoDeckViewControllerDelegate{
 
     func bingoDeck(_ bingoDeckViewController: BingoDeckViewController, cardOpened: BingoCard) {
         if let cardIndex = self.bingoGame.mainDeck.cards.index(of:cardOpened){
