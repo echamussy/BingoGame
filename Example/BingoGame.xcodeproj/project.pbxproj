@@ -27,6 +27,7 @@
 		EAB87C6021C7F38500F94FEB /* bingo-card-avocado.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5421C7F38500F94FEB /* bingo-card-avocado.png */; };
 		EAB87C6121C7F38500F94FEB /* bingo-card-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5521C7F38500F94FEB /* bingo-card-orange.png */; };
 		EAB87C6221C7F38500F94FEB /* bingo-card-pear.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C5621C7F38500F94FEB /* bingo-card-pear.png */; };
+		EAB87C8A21CA841700F94FEB /* bingo-closed-card.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB87C8921CA841700F94FEB /* bingo-closed-card.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EAB87C5421C7F38500F94FEB /* bingo-card-avocado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-avocado.png"; sourceTree = "<group>"; };
 		EAB87C5521C7F38500F94FEB /* bingo-card-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-orange.png"; sourceTree = "<group>"; };
 		EAB87C5621C7F38500F94FEB /* bingo-card-pear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-card-pear.png"; sourceTree = "<group>"; };
+		EAB87C8921CA841700F94FEB /* bingo-closed-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bingo-closed-card.png"; sourceTree = "<group>"; };
 		F52CD89CB9E747A4CEC8D50C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FB842E4A351378C99A5F5FD9 /* Pods_BingoGame_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingoGame_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -196,6 +198,7 @@
 		EAB87BFE21C7F1B700F94FEB /* FruitCards */ = {
 			isa = PBXGroup;
 			children = (
+				EAB87C8921CA841700F94FEB /* bingo-closed-card.png */,
 				EAB87C5321C7F38500F94FEB /* bingo-card-apple.png */,
 				EAB87C5421C7F38500F94FEB /* bingo-card-avocado.png */,
 				EAB87C4C21C7F38500F94FEB /* bingo-card-banana.png */,
@@ -304,6 +307,7 @@
 				EAB87C5E21C7F38500F94FEB /* bingo-card-kiwi.png in Resources */,
 				EAB87C5C21C7F38500F94FEB /* bingo-card-cherry.png in Resources */,
 				EAB87C5721C7F38500F94FEB /* bingo-card-blackberry.png in Resources */,
+				EAB87C8A21CA841700F94FEB /* bingo-closed-card.png in Resources */,
 				EAB87C5F21C7F38500F94FEB /* bingo-card-apple.png in Resources */,
 				EAB87C5821C7F38500F94FEB /* bingo-card-banana.png in Resources */,
 				EAB87C6221C7F38500F94FEB /* bingo-card-pear.png in Resources */,

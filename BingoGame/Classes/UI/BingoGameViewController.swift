@@ -7,24 +7,27 @@
 
 import UIKit
 
+protocol BingoGameViewControllerDelegate {
+    func bingoGame(viewController:BingoGameViewController, shouldAllowOpenCard:BingoCard)->Bool
+}
+
 public class BingoGameViewController: UIViewController {
 
-    @IBOutlet weak var localPlayerViewContainer: UIView!
-    @IBOutlet weak var mainDeckViewContainer: UIView!
-    @IBOutlet weak var remotePlayerViewContainer: UIView!
-    @IBOutlet weak var localPlayerLabel: UILabel!
-    @IBOutlet weak var remotePlayerLabel: UILabel!
+    @IBOutlet public weak var localPlayerViewContainer: UIView!
+    @IBOutlet public weak var mainDeckViewContainer: UIView!
+    @IBOutlet public weak var remotePlayerViewContainer: UIView!
+    @IBOutlet public weak var localPlayerLabel: UILabel!
+    @IBOutlet public weak var remotePlayerLabel: UILabel!
     
     private var localPlayerDeckViewController:BingoDeckViewController!
     private var remotePlayerDeckViewController:BingoDeckViewController!
     private var mainDeckViewController:BingoDeckViewController!
     
     private var bingoGame:BingoGame!
-    private var gameConfiguration:BingoGameConfiguration
     
     // MARK: Initializers
-    public init(gameConfiguration:BingoGameConfiguration) {
-        self.gameConfiguration = gameConfiguration
+    public init(bingoGame:BingoGame) {
+        self.bingoGame = bingoGame
         let bundle = Bundle(for: BingoGameViewController.self)
         super.init(nibName: "BingoGameViewController", bundle: bundle)
     }
@@ -37,8 +40,7 @@ public class BingoGameViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.setupGame()
+        self.bingoGame.delegate = self
         self.setupUI()
         self.updateScoreLabels()
     }
@@ -46,25 +48,19 @@ public class BingoGameViewController: UIViewController {
     // MARK: Private methods
     private func setupUI(){
         self.localPlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[0].assignedDeck)
-        BingoGameViewController.addChild(viewController: localPlayerDeckViewController,
+        LayoutUtilities.addChild(viewController: localPlayerDeckViewController,
                                      inView: self.localPlayerViewContainer,
                                      parentViewController: self)
         
         self.mainDeckViewController = BingoDeckViewController(deck:self.bingoGame.mainDeck, delegate:self)
-        BingoGameViewController.addChild(viewController: mainDeckViewController,
+        LayoutUtilities.addChild(viewController: mainDeckViewController,
                                      inView: self.mainDeckViewContainer,
                                      parentViewController: self)
         
         self.remotePlayerDeckViewController = BingoDeckViewController(deck:self.bingoGame.players[1].assignedDeck)
-        BingoGameViewController.addChild(viewController: remotePlayerDeckViewController,
+        LayoutUtilities.addChild(viewController: remotePlayerDeckViewController,
                                      inView: self.remotePlayerViewContainer,
                                      parentViewController: self)
-
-    }
-    
-    private func setupGame(){
-        self.bingoGame = BingoGame(configuration: self.gameConfiguration, delegate:self)
-        self.bingoGame.startGame()
     }
     
     private func updateScoreLabels(){
@@ -72,34 +68,6 @@ public class BingoGameViewController: UIViewController {
         self.localPlayerLabel.text = "\(localPlayer.playerId): \(localPlayer.assignedDeck.openedCards.count)"
         let remotePlayer = self.bingoGame.players[1]
         self.remotePlayerLabel.text = "\(remotePlayer.playerId): \(remotePlayer.assignedDeck.openedCards.count)"
-    }
-    
-    
-    // MARK: Static methods - GET OUT OF HERE AND USE OUR SHARED CLASS!
-    
-    static func addConstraintsTo(parentView:UIView, childView:UIView){
-        
-        let topConstraint = NSLayoutConstraint(item: childView, attribute: .top, relatedBy: .equal, toItem: parentView, attribute: .top, multiplier: 1, constant: 0)
-        let bottomConstraint = NSLayoutConstraint(item: childView, attribute: .bottom, relatedBy: .equal, toItem: parentView, attribute: .bottom, multiplier: 1, constant: 0)
-        let leadingConstraint = NSLayoutConstraint(item: childView, attribute: .leading, relatedBy: .equal, toItem: parentView, attribute: .leading, multiplier: 1, constant: 0)
-        let trailingConstraint = NSLayoutConstraint(item: childView, attribute: .trailing, relatedBy: .equal, toItem: parentView, attribute: .trailing, multiplier: 1, constant: 0)
-        
-        parentView.addConstraints([topConstraint, bottomConstraint, leadingConstraint, trailingConstraint])
-        parentView.layoutIfNeeded()
-        
-    }
-    
-    static func addChild(viewController:UIViewController, inView:UIView, parentViewController:UIViewController){
-        
-        let childView = viewController.view!
-        
-        childView.translatesAutoresizingMaskIntoConstraints = false
-        parentViewController.addChild(viewController)
-        inView.addSubview(childView)
-        viewController.didMove(toParent: parentViewController)
-        BingoGameViewController.addConstraintsTo(parentView: inView,
-                                         childView: childView)
-        
     }
 
 }
