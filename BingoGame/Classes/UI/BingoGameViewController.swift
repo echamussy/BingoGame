@@ -65,9 +65,9 @@ public class BingoGameViewController: UIViewController {
     
     private func updateScoreLabels(){
         let localPlayer = self.bingoGame.players[0]
-        self.localPlayerLabel.text = "\(localPlayer.playerId): \(localPlayer.assignedDeck.openedCards.count)"
+        self.localPlayerLabel.text = "\(localPlayer.configuration.playerId): \(localPlayer.assignedDeck.openedCards.count)"
         let remotePlayer = self.bingoGame.players[1]
-        self.remotePlayerLabel.text = "\(remotePlayer.playerId): \(remotePlayer.assignedDeck.openedCards.count)"
+        self.remotePlayerLabel.text = "\(remotePlayer.configuration.playerId): \(remotePlayer.assignedDeck.openedCards.count)"
     }
 
 }
@@ -85,7 +85,7 @@ extension BingoGameViewController:BingoGameDelegate{
     }
     
     public func bingoGame(_ game: BingoGame, deckCompleted byPlayer: BingoPlayer) {
-        print("Player '\(byPlayer.playerId)' completed deck!")
+        print("Player '\(byPlayer.configuration.playerId)' completed deck!")
         self.bingoGame.printGameStatus()
     }
     

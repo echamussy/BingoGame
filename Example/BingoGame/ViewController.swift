@@ -18,10 +18,14 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "avocado", "banana", "blackberry", "cherry", "kiwi", "orange", "pear", "pineapple", "raspberry", "strawberry", "watermelon"])
-        let gameConfiguration = BingoGameConfiguration(playerIds:["Emma", "Manuel"],
-                                                       availableCards:cardArray,
-                                                       shuffleCardsAtStart:true)
+        var cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "avocado", "banana", "blackberry", "cherry", "kiwi", "orange", "pear", "pineapple", "raspberry", "strawberry", "watermelon"])
+        cardArray.shuffle()
+        
+        let player1 = BingoPlayerConfiguration(playerId: "Emma")
+        let player2 = BingoPlayerConfiguration(playerId: "Manuel")
+        
+        let gameConfiguration = BingoGameConfiguration(players:[player1, player2],
+                                                       availableCards:cardArray)
         let bingoGame = BingoGame(configuration: gameConfiguration)
         bingoGame.startGame()
         
