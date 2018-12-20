@@ -35,7 +35,7 @@ public class BingoGame {
     public private(set) var players:Array<BingoPlayer> = []
     public weak var delegate:BingoGameDelegate?
     
-    public init(configuration:BingoGameConfiguration, delegate:BingoGameDelegate?) {
+    public init(configuration:BingoGameConfiguration, delegate:BingoGameDelegate? = nil) {
         self.configuration = configuration
         self.delegate = delegate
     }

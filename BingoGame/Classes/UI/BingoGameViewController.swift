@@ -24,11 +24,10 @@ public class BingoGameViewController: UIViewController {
     private var mainDeckViewController:BingoDeckViewController!
     
     private var bingoGame:BingoGame!
-    private var gameConfiguration:BingoGameConfiguration
     
     // MARK: Initializers
-    public init(gameConfiguration:BingoGameConfiguration) {
-        self.gameConfiguration = gameConfiguration
+    public init(bingoGame:BingoGame) {
+        self.bingoGame = bingoGame
         let bundle = Bundle(for: BingoGameViewController.self)
         super.init(nibName: "BingoGameViewController", bundle: bundle)
     }
@@ -41,8 +40,7 @@ public class BingoGameViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.setupGame()
+        self.bingoGame.delegate = self
         self.setupUI()
         self.updateScoreLabels()
     }
@@ -63,11 +61,6 @@ public class BingoGameViewController: UIViewController {
         LayoutUtilities.addChild(viewController: remotePlayerDeckViewController,
                                      inView: self.remotePlayerViewContainer,
                                      parentViewController: self)
-    }
-    
-    private func setupGame(){
-        self.bingoGame = BingoGame(configuration: self.gameConfiguration, delegate:self)
-        self.bingoGame.startGame()
     }
     
     private func updateScoreLabels(){

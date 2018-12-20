@@ -21,9 +21,11 @@ class ViewController: UIViewController {
         let cardArray = BingoDeck.createCardArrayFrom(elements: ["apple", "avocado", "banana", "blackberry", "cherry", "kiwi", "orange", "pear", "pineapple", "raspberry", "strawberry", "watermelon"])
         let gameConfiguration = BingoGameConfiguration(playerIds:["Emma", "Manuel"],
                                                        availableCards:cardArray,
-                                                       shuffleCardsAtStart:false)
+                                                       shuffleCardsAtStart:true)
+        let bingoGame = BingoGame(configuration: gameConfiguration)
+        bingoGame.startGame()
         
-        let bingoViewController = BingoGameViewController(gameConfiguration:gameConfiguration)
+        let bingoViewController = BingoGameViewController(bingoGame: bingoGame)
         self.present(bingoViewController, animated: false, completion: nil)
     }
 }
