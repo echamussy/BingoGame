@@ -68,6 +68,12 @@ public class BingoGameViewController: UIViewController {
         let remotePlayer = self.bingoGame.players[1]
         self.remotePlayerLabel.text = "\(remotePlayer.configuration.playerId): \(remotePlayer.assignedDeck.openedCards.count)"
     }
+    
+    // Pulbic methods
+    
+    public func open(card:BingoCard){
+        self.mainDeckViewController.handleOpened(card: card)
+    }
 
 }
 
