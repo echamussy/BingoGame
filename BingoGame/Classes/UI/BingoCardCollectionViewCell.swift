@@ -14,6 +14,7 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var animationView: UIView!
     
     private var card:BingoCard!
+    private var isOpen:Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,19 +32,22 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
     }
     
     public func upTurn(completion: (@escaping () -> Void)){
-        UIView.transition(with: contentView,
-                          duration: 1,
-                          options: .transitionFlipFromRight,
-                          animations: {
-                            self.imageView.image = UIImage(named: "bingo-card-\(self.card.name)")
-        }, completion: { (_) in
-            UIView.animate(withDuration: 1.0, delay: 1.5, options: [.curveEaseInOut], animations: {
-                self.imageView.alpha = 0.0
+        if (!isOpen){
+            UIView.transition(with: contentView,
+                              duration: 1,
+                              options: .transitionFlipFromRight,
+                              animations: {
+                                self.imageView.image = UIImage(named: "bingo-card-\(self.card.name)")
             }, completion: { (_) in
-                
+                UIView.animate(withDuration: 1.0, delay: 1.5, options: [.curveEaseInOut], animations: {
+                    self.imageView.alpha = 0.0
+                }, completion: { (_) in
+                    
+                })
+                completion()
             })
-            completion()
-        })
+            self.isOpen = true
+        }
     }
     
     public func animateFound(completion: (@escaping () -> Void)){
