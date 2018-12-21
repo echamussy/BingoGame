@@ -52,26 +52,27 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
     
     public func animateFound(completion: (@escaping () -> Void)){
         if let animationPath = Bundle(for:BingoCardCollectionViewCell.self).path(forResource: "favourite_app_icon", ofType: "json"){
-            let lottieView = LOTAnimationView(filePath: animationPath)
-            lottieView.contentMode = .scaleAspectFit
-            lottieView.frame = CGRect(x: ((self.animationView.frame.size.width / 2) * -1),
-                                      y: ((self.animationView.frame.size.height / 2) * -1),
-                                      width: self.animationView.frame.size.width * 2,
-                                      height: self.animationView.frame.size.height * 2)
-            lottieView.loopAnimation = false
-            
-            self.imageView.alpha = 0.0
-            
-            self.animationView.addSubview(lottieView)
-            lottieView.play { (_) in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    lottieView.removeFromSuperview()
-                    self.imageView.alpha = 1.0
-                    completion()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                let lottieView = LOTAnimationView(filePath: animationPath)
+                lottieView.contentMode = .scaleAspectFit
+                lottieView.frame = CGRect(x: ((self.animationView.frame.size.width / 2) * -1),
+                                          y: ((self.animationView.frame.size.height / 2) * -1),
+                                          width: self.animationView.frame.size.width * 2,
+                                          height: self.animationView.frame.size.height * 2)
+                lottieView.loopAnimation = false
+                
+                self.imageView.alpha = 0.0
+                
+                self.animationView.addSubview(lottieView)
+                
+                lottieView.play { (_) in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        lottieView.removeFromSuperview()
+                        self.imageView.alpha = 1.0
+                        completion()
+                    }
                 }
             }
-        
         }
     }
-
 }
