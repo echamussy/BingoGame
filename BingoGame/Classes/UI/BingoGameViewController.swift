@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol BingoGameViewControllerDelegate {
-    func bingoGame(viewController:BingoGameViewController, shouldAllowOpenCard:BingoCard)->Bool
-}
-
 public class BingoGameViewController: UIViewController {
 
     @IBOutlet public weak var localPlayerViewContainer: UIView!
@@ -19,6 +15,7 @@ public class BingoGameViewController: UIViewController {
     @IBOutlet public weak var localPlayerLabel: UILabel!
     @IBOutlet public weak var remotePlayerLabel: UILabel!
     
+    private weak var delegate:BingoDeckViewControllerDelegate?
     private var localPlayerDeckViewController:BingoDeckViewController!
     private var remotePlayerDeckViewController:BingoDeckViewController!
     private var mainDeckViewController:BingoDeckViewController!
@@ -26,8 +23,10 @@ public class BingoGameViewController: UIViewController {
     private var bingoGame:BingoGame!
     
     // MARK: Initializers
-    public init(bingoGame:BingoGame) {
+    public init(bingoGame:BingoGame, delegate:BingoDeckViewControllerDelegate? = nil) {
         self.bingoGame = bingoGame
+        self.delegate = delegate
+        
         let bundle = Bundle(for: BingoGameViewController.self)
         super.init(nibName: "BingoGameViewController", bundle: bundle)
     }
@@ -92,10 +91,15 @@ extension BingoGameViewController:BingoGameDelegate{
 }
 
 extension BingoGameViewController:BingoDeckViewControllerDelegate{
+    
+    public func bingoDeck(_ bingoDeckViewController: BingoDeckViewController, allowToOpenCard: BingoCard) -> Bool {
+        return self.delegate?.bingoDeck(bingoDeckViewController, allowToOpenCard:allowToOpenCard) ?? true
+    }
 
-    func bingoDeck(_ bingoDeckViewController: BingoDeckViewController, cardOpened: BingoCard) {
+    public func bingoDeck(_ bingoDeckViewController: BingoDeckViewController, cardOpened: BingoCard) {
         if let cardIndex = self.bingoGame.mainDeck.cards.index(of:cardOpened){
             self.bingoGame.openCard(atIndex: cardIndex)
+            self.delegate?.bingoDeck(bingoDeckViewController, cardOpened: cardOpened)
         } else {
             print("Card was not found in deck!!!")
             assert(false)
