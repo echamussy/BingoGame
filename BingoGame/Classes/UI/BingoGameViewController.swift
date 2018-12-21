@@ -72,7 +72,12 @@ public class BingoGameViewController: UIViewController {
     // Pulbic methods
     
     public func open(card:BingoCard){
-        self.mainDeckViewController.handleOpened(card: card)
+        //self.mainDeckViewController.handleOpened(card: card)
+        if self.bingoGame.mainDeck.cards.contains(card){
+            if let cardIndex = self.bingoGame.mainDeck.cards.index(of:card){
+                self.bingoGame.openCard(atIndex: cardIndex)
+            }
+        }
     }
 
 }

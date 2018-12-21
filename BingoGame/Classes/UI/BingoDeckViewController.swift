@@ -62,8 +62,12 @@ public class BingoDeckViewController: UIViewController {
             if let cardIndex = self.deck.cards.index(of:card){
                 let indexPath = IndexPath(row: cardIndex, section: 0)
                 let cellSelected = self.collectionView.cellForItem(at: indexPath) as! BingoCardCollectionViewCell
-                cellSelected.animateFound {
-                    self.checkIfWinner()
+                if (self.deck.type == .mainDeck){
+                    cellSelected.upTurn { }
+                } else {
+                    cellSelected.animateFound {
+                        self.checkIfWinner()
+                    }
                 }
             }
         }
