@@ -14,6 +14,7 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var animationView: UIView!
     
     private var card:BingoCard!
+    private var isOpen:Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,43 +32,47 @@ class BingoCardCollectionViewCell: UICollectionViewCell {
     }
     
     public func upTurn(completion: (@escaping () -> Void)){
-        UIView.transition(with: contentView,
-                          duration: 1,
-                          options: .transitionFlipFromRight,
-                          animations: {
-                            self.imageView.image = UIImage(named: "bingo-card-\(self.card.name)")
-        }, completion: { (_) in
-            UIView.animate(withDuration: 1.0, delay: 1.5, options: [.curveEaseInOut], animations: {
-                self.imageView.alpha = 0.0
+        if (!isOpen){
+            UIView.transition(with: contentView,
+                              duration: 1,
+                              options: .transitionFlipFromRight,
+                              animations: {
+                                self.imageView.image = UIImage(named: "bingo-card-\(self.card.name)")
             }, completion: { (_) in
-                
+                UIView.animate(withDuration: 1.0, delay: 1.5, options: [.curveEaseInOut], animations: {
+                    self.imageView.alpha = 0.0
+                }, completion: { (_) in
+                    
+                })
+                completion()
             })
-            completion()
-        })
+            self.isOpen = true
+        }
     }
     
     public func animateFound(completion: (@escaping () -> Void)){
         if let animationPath = Bundle(for:BingoCardCollectionViewCell.self).path(forResource: "favourite_app_icon", ofType: "json"){
-            let lottieView = LOTAnimationView(filePath: animationPath)
-            lottieView.contentMode = .scaleAspectFit
-            lottieView.frame = CGRect(x: ((self.animationView.frame.size.width / 2) * -1),
-                                      y: ((self.animationView.frame.size.height / 2) * -1),
-                                      width: self.animationView.frame.size.width * 2,
-                                      height: self.animationView.frame.size.height * 2)
-            lottieView.loopAnimation = false
-            
-            self.imageView.alpha = 0.0
-            
-            self.animationView.addSubview(lottieView)
-            lottieView.play { (_) in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    lottieView.removeFromSuperview()
-                    self.imageView.alpha = 1.0
-                    completion()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                let lottieView = LOTAnimationView(filePath: animationPath)
+                lottieView.contentMode = .scaleAspectFit
+                lottieView.frame = CGRect(x: ((self.animationView.frame.size.width / 2) * -1),
+                                          y: ((self.animationView.frame.size.height / 2) * -1),
+                                          width: self.animationView.frame.size.width * 2,
+                                          height: self.animationView.frame.size.height * 2)
+                lottieView.loopAnimation = false
+                
+                self.imageView.alpha = 0.0
+                
+                self.animationView.addSubview(lottieView)
+                
+                lottieView.play { (_) in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        lottieView.removeFromSuperview()
+                        self.imageView.alpha = 1.0
+                        completion()
+                    }
                 }
             }
-        
         }
     }
-
 }

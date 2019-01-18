@@ -8,11 +8,12 @@
 import UIKit
 import Lottie
 
-protocol BingoDeckViewControllerDelegate:class{
+public protocol BingoDeckViewControllerDelegate:class{
+    func bingoDeck(_ bingoDeckViewController:BingoDeckViewController, allowToOpenCard:BingoCard)->Bool
     func bingoDeck(_ bingoDeckViewController:BingoDeckViewController, cardOpened:BingoCard)
 }
 
-class BingoDeckViewController: UIViewController {
+public class BingoDeckViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var animationView: UIView!
@@ -21,7 +22,7 @@ class BingoDeckViewController: UIViewController {
     private weak var delegate:BingoDeckViewControllerDelegate?
     
     // MARK: Initializers
-    init(deck:BingoDeck, delegate:BingoDeckViewControllerDelegate? = nil) {
+    public init(deck:BingoDeck, delegate:BingoDeckViewControllerDelegate? = nil) {
         self.deck = deck
         self.delegate = delegate
         let bundle = Bundle(for: BingoDeckViewController.self)
@@ -34,7 +35,7 @@ class BingoDeckViewController: UIViewController {
     
     // MARK: View lifecycle
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.animationView.isHidden = true
         let collectionViewLayout = BingoDeckCollectionViewFlowLayout(deck:self.deck)
@@ -49,7 +50,7 @@ class BingoDeckViewController: UIViewController {
         self.collectionView.dataSource = self
     }
     
-    override func viewDidLayoutSubviews() {
+    override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.collectionView.collectionViewLayout.invalidateLayout()
     }
@@ -61,8 +62,12 @@ class BingoDeckViewController: UIViewController {
             if let cardIndex = self.deck.cards.index(of:card){
                 let indexPath = IndexPath(row: cardIndex, section: 0)
                 let cellSelected = self.collectionView.cellForItem(at: indexPath) as! BingoCardCollectionViewCell
-                cellSelected.animateFound {
-                    self.checkIfWinner()
+                if (self.deck.type == .mainDeck){
+                    cellSelected.upTurn { }
+                } else {
+                    cellSelected.animateFound {
+                        self.checkIfWinner()
+                    }
                 }
             }
         }
@@ -92,11 +97,11 @@ class BingoDeckViewController: UIViewController {
 }
 
 extension BingoDeckViewController:UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.deck.cards.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! BingoCardCollectionViewCell
         let card = self.deck.cards[indexPath.row]
         
@@ -109,15 +114,14 @@ extension BingoDeckViewController:UICollectionViewDataSource{
 
 extension BingoDeckViewController:UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if self.deck.type == .mainDeck{
             let card = self.deck.cards[indexPath.row]
             
-            if self.deck.openedCards.contains(card){
-                // Card is already opened
-            } else {
-                let cellSelected = self.collectionView.cellForItem(at: indexPath) as! BingoCardCollectionViewCell
-                cellSelected.upTurn {
+            if (self.delegate?.bingoDeck(self, allowToOpenCard: card) ?? true){
+                if self.deck.openedCards.contains(card){
+                    // Card is already opened
+                } else {
                     self.delegate?.bingoDeck(self, cardOpened: card)
                 }
             }

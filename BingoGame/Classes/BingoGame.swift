@@ -8,15 +8,13 @@
 import Foundation
 
 public struct BingoGameConfiguration:Codable{
-
-    public let playerIds:Array<String>
+    
+    public let players:Array<BingoPlayerConfiguration>
     public let availableCards:Array<BingoCard> // Should always be dividable by number of players with remainder 0
-    public let shuffleCardsAtStart:Bool
-
-    public init(playerIds:Array<String>, availableCards:Array<BingoCard>, shuffleCardsAtStart:Bool){
-        self.playerIds = playerIds
+    
+    public init(players:Array<BingoPlayerConfiguration>, availableCards:Array<BingoCard>){
+        self.players = players
         self.availableCards = availableCards
-        self.shuffleCardsAtStart = shuffleCardsAtStart
     }
 }
 
@@ -39,7 +37,7 @@ public class BingoGame {
         self.configuration = configuration
         self.delegate = delegate
     }
-
+    
     public func startGame(newConfiguration:BingoGameConfiguration? = nil){
         print("Will start setting up a new Bingo game")
         if let newConfiguration = newConfiguration{
@@ -66,9 +64,9 @@ public class BingoGame {
         print("Main Deck: \(self.mainDeck.cards)")
         print("Opened cards: \(self.mainDeck.openedCards)")
         self.players.forEach { (player) in
-            print("Player '\(player.playerId)' has cards: \(player.assignedDeck.cards)")
-            print("Player '\(player.playerId)' has found cards: \(player.assignedDeck.openedCards)")
-            print("Player '\(player.playerId)' score: \(player.assignedDeck.openedCards.count)")
+            print("Player '\(player.configuration.playerId)' has cards: \(player.assignedDeck.cards)")
+            print("Player '\(player.configuration.playerId)' has found cards: \(player.assignedDeck.openedCards)")
+            print("Player '\(player.configuration.playerId)' score: \(player.assignedDeck.openedCards.count)")
         }
     }
 }
@@ -85,7 +83,7 @@ private extension BingoGame{
     }
     
     private func verifyGameConfiguration() -> Bool{
-        if (configuration.availableCards.count % self.configuration.playerIds.count == 0){
+        if (configuration.availableCards.count % self.configuration.players.count == 0){
             return true
         } else {
             print("BINGO GAME ERROR: The number of available cards does not divide exactly between players!")
@@ -105,24 +103,26 @@ private extension BingoGame{
     private func configureMainDeck(){
         if mainDeck != nil { mainDeck.reset() }
         self.mainDeck = BingoDeck(cards: self.configuration.availableCards, type:.mainDeck)
-        if self.configuration.shuffleCardsAtStart { self.mainDeck.shuffle() }
     }
     
     private func configureUsers(){
         self.players.removeAll()
         
         var playerIndex = 0
-        let numberOfCardsPerPlayer = Int(self.mainDeck.cards.count / self.configuration.playerIds.count)
-        let cardsForPlayers = (self.configuration.shuffleCardsAtStart ? self.mainDeck.cards.shuffled() : self.mainDeck.cards)
+        let numberOfCardsPerPlayer = Int(self.mainDeck.cards.count / self.configuration.players.count)
+        let cardsForPlayers = self.mainDeck.cards.shuffled()
         
-        self.configuration.playerIds.forEach { (playerId) in
+        self.configuration.players.forEach { (playerConfiguration) in
             let startIndex = playerIndex * numberOfCardsPerPlayer
             let endIndex = ((playerIndex + 1) * numberOfCardsPerPlayer) - 1
             
-            let playerCards = Array(cardsForPlayers[startIndex...endIndex])
+            let playerCards = (playerConfiguration.assignedCards != nil ?
+                playerConfiguration.assignedCards!:
+                Array(cardsForPlayers[startIndex...endIndex]))
+            
             let playerDeck = BingoDeck(cards: playerCards, type:.playerDeck)
             
-            let player = BingoPlayer(playerId:playerId, assignedDeck:playerDeck)
+            let player = BingoPlayer(configuration:playerConfiguration, assignedDeck:playerDeck)
             self.players.append(player)
             playerIndex = playerIndex + 1
         }
