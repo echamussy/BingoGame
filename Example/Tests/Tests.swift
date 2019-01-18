@@ -1,5 +1,4 @@
 import XCTest
-import BingoGame
 
 class Tests: XCTestCase {
     
