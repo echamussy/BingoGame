@@ -79,10 +79,10 @@ public class BingoDeckViewController: UIViewController {
         if self.deck.cards.count == self.deck.openedCards.count{
             // We have copleted our deck
             if let animationPath = Bundle(for:BingoCardCollectionViewCell.self).path(forResource: "trophy", ofType: "json"){
-                let lottieView = LOTAnimationView(filePath: animationPath)
+                let lottieView = AnimationView(filePath: animationPath)
                 lottieView.contentMode = .scaleAspectFit
                 lottieView.frame = self.animationView.frame
-                lottieView.loopAnimation = false
+                lottieView.loopMode = .playOnce
                 
                 self.animationView.isHidden = false
                 self.collectionView.isHidden = true
