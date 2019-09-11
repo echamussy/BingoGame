@@ -1,7 +1,7 @@
 PODS:
   - BingoGame (0.1.0):
     - lottie-ios
-  - lottie-ios (2.5.2)
+  - lottie-ios (3.1.2)
 
 DEPENDENCIES:
   - BingoGame (from `../`)
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BingoGame: e8bf09029f3297aac4557158b0a9a2248ccdc039
-  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  BingoGame: 633309a5a346786325ae0cc2e4665b8e2ee74e46
+  lottie-ios: 49cd85b1f24f61a7708ad7ec76a523ab2d0e3100
 
 PODFILE CHECKSUM: 38d4614f46899146b4445972ec4386836bdfd974
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5
