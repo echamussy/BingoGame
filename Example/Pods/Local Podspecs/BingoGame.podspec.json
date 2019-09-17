@@ -18,10 +18,9 @@
   "platforms": {
     "ios": "11.0"
   },
-  "swift_version": "4.2",
+  "swift_versions": "4.2",
   "source_files": [
-    "BingoGame/Classes/**/*.swift",
-    "BingoGame/Classes/UI/**/*.swift"
+    "BingoGame/Classes/**/*.swift"
   ],
   "resources": [
     "BingoGame/Assets/**/*.json",
@@ -31,5 +30,6 @@
     "lottie-ios": [
 
     ]
-  }
+  },
+  "swift_version": "4.2"
 }
